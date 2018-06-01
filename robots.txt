@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: hhttps://melund.github.io/anyscript_test/sitemap.xml

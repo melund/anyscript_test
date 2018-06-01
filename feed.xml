@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-06-01T10:03:15+00:00</updated><id>/</id><title type="html">AnyScript Community</title><subtitle>A community for the users of AnyBody Modeling System and the AnyScript language.</subtitle><author><name>AnyBody Technology</name><email>sales@anybodytech.com</email></author><entry><title type="html">What is new AMMR 2.0</title><link href="/news/ammr-2.0/" rel="alternate" type="text/html" title="What is new AMMR 2.0" /><published>2017-11-29T00:00:00+00:00</published><updated>2017-11-29T00:00:00+00:00</updated><id>/news/ammr-2.0</id><content type="html" xml:base="/news/ammr-2.0/">&lt;p&gt;Join us for the launch of version 7.1 of our musculoskeletal simulation software - The AnyBody Modeling System, and a new version of the AnyBody Model repository (AMMR 2.0).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="hhttps://melund.github.io/anyscript_test/feed.xml" rel="self" type="application/atom+xml" /><link href="hhttps://melund.github.io/anyscript_test/" rel="alternate" type="text/html" /><updated>2018-06-01T10:20:27+00:00</updated><id>hhttps://melund.github.io/anyscript_test/</id><title type="html">AnyScript Community</title><subtitle>A community for the users of AnyBody Modeling System and the AnyScript language.</subtitle><author><name>AnyBody Technology</name><email>sales@anybodytech.com</email></author><entry><title type="html">What is new AMMR 2.0</title><link href="hhttps://melund.github.io/anyscript_test/news/ammr-2.0/" rel="alternate" type="text/html" title="What is new AMMR 2.0" /><published>2017-11-29T00:00:00+00:00</published><updated>2017-11-29T00:00:00+00:00</updated><id>hhttps://melund.github.io/anyscript_test/news/ammr-2.0</id><content type="html" xml:base="hhttps://melund.github.io/anyscript_test/news/ammr-2.0/">&lt;p&gt;Join us for the launch of version 7.1 of our musculoskeletal simulation software - The AnyBody Modeling System, and a new version of the AnyBody Model repository (AMMR 2.0).&lt;/p&gt;
 
 &lt;p&gt;In this webcast, Morten Enemark Lund, R&amp;amp;D Engineer at AnyBody Technology, will the new software features and the exciting new model repository which is shipped with version 7.1.&lt;/p&gt;
 
@@ -30,7 +30,7 @@ a huge task to update our existing models and adding new models and examples.&lt
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/tutorials_new_tutorial.png&quot; alt=&quot;New tutorials website&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/tutorials_new_tutorial.png&quot; alt=&quot;New tutorials website&quot; /&gt;
 
   &lt;figcaption&gt;The new tutorials&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -55,7 +55,7 @@ resources in many older Windows Programmers.&lt;/p&gt;
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/tutorials_old_tutorial.png&quot; alt=&quot;Old tutorials hosted as Microsoft HTML help&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/tutorials_old_tutorial.png&quot; alt=&quot;Old tutorials hosted as Microsoft HTML help&quot; /&gt;
 
   &lt;figcaption&gt;The old Tutorials served through Microsoft HTML help&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -154,7 +154,7 @@ CI&lt;/a&gt;&lt;/p&gt;
 Status&quot; /&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Once a change is accepted and merged into the repository the script also automatically deploys the tutorial web page.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="AMMR" /><category term="Models" /><summary type="html">With the release of the AnyBody Modeling System 7.1 update, we thought it was time to make a post about all the improvements in the new model repository.</summary></entry><entry><title type="html">Getting AnyBody and Numpy to work</title><link href="/news/Numpy-and-scipy/" rel="alternate" type="text/html" title="Getting AnyBody and Numpy to work" /><published>2017-11-25T00:00:00+00:00</published><updated>2017-11-25T00:00:00+00:00</updated><id>/news/Numpy-and-scipy</id><content type="html" xml:base="/news/Numpy-and-scipy/">&lt;p&gt;With the release of the AnyBody Modeling System 7.1 update, we thought it was
+&lt;p&gt;Once a change is accepted and merged into the repository the script also automatically deploys the tutorial web page.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="AMMR" /><category term="Models" /><summary type="html">With the release of the AnyBody Modeling System 7.1 update, we thought it was time to make a post about all the improvements in the new model repository.</summary></entry><entry><title type="html">Getting AnyBody and Numpy to work</title><link href="hhttps://melund.github.io/anyscript_test/news/Numpy-and-scipy/" rel="alternate" type="text/html" title="Getting AnyBody and Numpy to work" /><published>2017-11-25T00:00:00+00:00</published><updated>2017-11-25T00:00:00+00:00</updated><id>hhttps://melund.github.io/anyscript_test/news/Numpy-and-scipy</id><content type="html" xml:base="hhttps://melund.github.io/anyscript_test/news/Numpy-and-scipy/">&lt;p&gt;With the release of the AnyBody Modeling System 7.1 update, we thought it was
 time to make a post about all the improvements in the new model repository.&lt;/p&gt;
 
 &lt;p&gt;The AnyBody Managed Model Repository (AMMR) version 2.0 marks the culmination of
@@ -162,7 +162,7 @@ a huge task to update our existing models and adding new models and examples.&lt
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/tutorials_new_tutorial.png&quot; alt=&quot;New tutorials website&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/tutorials_new_tutorial.png&quot; alt=&quot;New tutorials website&quot; /&gt;
 
   &lt;figcaption&gt;The new tutorials&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -181,7 +181,7 @@ resources in many older Windows Programmers.&lt;/p&gt;
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/tutorials_old_tutorial.png&quot; alt=&quot;Old tutorials hosted as Microsoft HTML help&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/tutorials_old_tutorial.png&quot; alt=&quot;Old tutorials hosted as Microsoft HTML help&quot; /&gt;
 
   &lt;figcaption&gt;The old Tutorials served through Microsoft HTML help&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -280,7 +280,7 @@ CI&lt;/a&gt;&lt;/p&gt;
 Status&quot; /&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Once a change is accepted and merged into the repository the script also automatically deploys the tutorial web page.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="AMMR" /><category term="Models" /><summary type="html">In this post we will explore why it is hard to use the NumPy and Scipy packages from AnyBody.</summary></entry><entry><title type="html">Freeing the AnyBody Tutorials</title><link href="/news/freeing-the-anybody-tutorials/" rel="alternate" type="text/html" title="Freeing the AnyBody Tutorials" /><published>2017-08-14T00:00:00+00:00</published><updated>2017-08-14T00:00:00+00:00</updated><id>/news/freeing-the-anybody-tutorials</id><content type="html" xml:base="/news/freeing-the-anybody-tutorials/">&lt;p&gt;Anyone, who works with AnyBody modeling system has at one time used the AnyBody
+&lt;p&gt;Once a change is accepted and merged into the repository the script also automatically deploys the tutorial web page.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="AMMR" /><category term="Models" /><summary type="html">In this post we will explore why it is hard to use the NumPy and Scipy packages from AnyBody.</summary></entry><entry><title type="html">Freeing the AnyBody Tutorials</title><link href="hhttps://melund.github.io/anyscript_test/news/freeing-the-anybody-tutorials/" rel="alternate" type="text/html" title="Freeing the AnyBody Tutorials" /><published>2017-08-14T00:00:00+00:00</published><updated>2017-08-14T00:00:00+00:00</updated><id>hhttps://melund.github.io/anyscript_test/news/freeing-the-anybody-tutorials</id><content type="html" xml:base="hhttps://melund.github.io/anyscript_test/news/freeing-the-anybody-tutorials/">&lt;p&gt;Anyone, who works with AnyBody modeling system has at one time used the AnyBody
 tutorials. They are a valuable resource when learning to use the AnyBody
 Modeling System and there are more than 15 different tutorials covering
 everything from ‘Getting Started’ tutorials for the new users to very advanced
@@ -290,7 +290,7 @@ topics like force dependent kinematics and FEA interfaces.&lt;/p&gt;
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/tutorials_new_tutorial.png&quot; alt=&quot;New tutorials website&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/tutorials_new_tutorial.png&quot; alt=&quot;New tutorials website&quot; /&gt;
 
   &lt;figcaption&gt;The new tutorials&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -303,7 +303,7 @@ resources in many older Windows Programmers.&lt;/p&gt;
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/tutorials_old_tutorial.png&quot; alt=&quot;Old tutorials hosted as Microsoft HTML help&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/tutorials_old_tutorial.png&quot; alt=&quot;Old tutorials hosted as Microsoft HTML help&quot; /&gt;
 
   &lt;figcaption&gt;The old Tutorials served through Microsoft HTML help&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -403,7 +403,7 @@ Status&quot; /&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Once a change is accepted and merged into the repository the script also
-automatically deploys the tutorial web page.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Tutorials" /><category term="Sphinx" /><summary type="html">Anyone, who works with AnyBody modeling system has at one time used the the AnyBody tutorials. They are a valuable resources when learning to use the AnyBody Modeling System</summary></entry><entry><title type="html">AnyScript support in Visual Studio Code</title><link href="/editors/anyscript-in-vscode/" rel="alternate" type="text/html" title="AnyScript support in Visual Studio Code" /><published>2017-07-15T00:00:00+00:00</published><updated>2017-07-15T00:00:00+00:00</updated><id>/editors/anyscript-in-vscode</id><content type="html" xml:base="/editors/anyscript-in-vscode/">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;Visual Studio Code&lt;/a&gt;(VS Code) is one of the newest text
+automatically deploys the tutorial web page.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Tutorials" /><category term="Sphinx" /><summary type="html">Anyone, who works with AnyBody modeling system has at one time used the the AnyBody tutorials. They are a valuable resources when learning to use the AnyBody Modeling System</summary></entry><entry><title type="html">AnyScript support in Visual Studio Code</title><link href="hhttps://melund.github.io/anyscript_test/editors/anyscript-in-vscode/" rel="alternate" type="text/html" title="AnyScript support in Visual Studio Code" /><published>2017-07-15T00:00:00+00:00</published><updated>2017-07-15T00:00:00+00:00</updated><id>hhttps://melund.github.io/anyscript_test/editors/anyscript-in-vscode</id><content type="html" xml:base="hhttps://melund.github.io/anyscript_test/editors/anyscript-in-vscode/">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;Visual Studio Code&lt;/a&gt;(VS Code) is one of the newest text
 editors to join the group of new powerful source code editors like &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;,  &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; and &lt;a href=&quot;http://brackets.io&quot;&gt;brackets&lt;/a&gt;. All of which have become extremely popular in recent years.&lt;/p&gt;
 
 &lt;p&gt;Visual Studio Code  is currently my favorite text editor. It is cross-platform, lightweight, extensible and powerful. So of
@@ -412,7 +412,7 @@ AnyScript extension for VSCode, that does syntax highlighting, code folding,
 and snippets.&lt;/p&gt;
 
 &lt;p&gt;This is the second post in our series on using external editors for AnyScript.
-&lt;a href=&quot;/editors/notepad++-and-anyscript/&quot;&gt;In the first post&lt;/a&gt;)
+&lt;a href=&quot;hhttps://melund.github.io/anyscript_test/editors/notepad++-and-anyscript/&quot;&gt;In the first post&lt;/a&gt;)
 I showed a handy extension for &lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;Notepad++&lt;/a&gt;,
 so if you use Notepad++ check that post.&lt;/p&gt;
 
@@ -424,7 +424,7 @@ users can change themes, keyboard shortcuts and much more.&lt;/p&gt;
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/vscode_screenshot.png&quot; alt=&quot;VSCode&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/vscode_screenshot.png&quot; alt=&quot;VSCode&quot; /&gt;
 
   &lt;figcaption&gt;Screenshot from Visual Studio Code, with AnyScript syntax highlighting.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -440,7 +440,7 @@ search for AnyScript. Then click install.&lt;/p&gt;
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/vscode_extension_install.png&quot; alt=&quot;VSCode&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/vscode_extension_install.png&quot; alt=&quot;VSCode&quot; /&gt;
 
   &lt;figcaption&gt;Installing the AnyScript extension.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -452,7 +452,7 @@ search for AnyScript. Then click install.&lt;/p&gt;
 &lt;p&gt;THe plugin also gives you code folding, which allows you to collapse classes and
 folders. A feature which is really handy when working on large files.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/vscode_folding.png&quot; alt=&quot;VSCode code folding&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/vscode_folding.png&quot; alt=&quot;VSCode code folding&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;VS hCode supports code snippets which are templates that makes it easier to write
 repeating code patterns. This part isn’t fully supported by the extension yet.
@@ -467,7 +467,7 @@ snippets.&lt;/p&gt;
 &lt;p&gt;Snippets can also be inserted using the tab completer. So if you start to type
 the name of the class e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyDrawRe&lt;/code&gt; and press tab the snippet is inserted.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/vscode_snippets.gif&quot; alt=&quot;VSCode code folding&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/vscode_snippets.gif&quot; alt=&quot;VSCode code folding&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The snippets are just meant as a test, but hopefully we can have snippets for all the AnyScript classes in the future.&lt;/p&gt;
 
@@ -475,7 +475,7 @@ the name of the class e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyDr
 
 &lt;p&gt;Here is an link to page where the extension live:
 https://github.com/AnyBody/vscode-anyscript. Any improvements and help is most
-appreciated.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Syntax highlighting" /><category term="Visual Studio Code" /><summary type="html">Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.</summary></entry><entry><title type="html">Body Model Configuration App</title><link href="/tools/body-model-configurator/" rel="alternate" type="text/html" title="Body Model Configuration App" /><published>2017-05-25T00:00:00+00:00</published><updated>2017-05-25T00:00:00+00:00</updated><id>/tools/body-model-configurator</id><content type="html" xml:base="/tools/body-model-configurator/">&lt;p&gt;Graphical user interfaces (GUIs) enables easy and intuitive interaction between
+appreciated.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Syntax highlighting" /><category term="Visual Studio Code" /><summary type="html">Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.</summary></entry><entry><title type="html">Body Model Configuration App</title><link href="hhttps://melund.github.io/anyscript_test/tools/body-model-configurator/" rel="alternate" type="text/html" title="Body Model Configuration App" /><published>2017-05-25T00:00:00+00:00</published><updated>2017-05-25T00:00:00+00:00</updated><id>hhttps://melund.github.io/anyscript_test/tools/body-model-configurator</id><content type="html" xml:base="hhttps://melund.github.io/anyscript_test/tools/body-model-configurator/">&lt;p&gt;Graphical user interfaces (GUIs) enables easy and intuitive interaction between
 users and computer software. But GUIs may also hamper the flexibility and make
 the software less powerful. Hence, many powerful software tools are based on
 scripts, text and code. This is also the case of the AnyBody Modeling System.
@@ -497,7 +497,7 @@ flexibility of AnyScript.&lt;/p&gt;
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/BM_Plugin_demo.gif&quot; alt=&quot;BM_Plugin_Demo&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/BM_Plugin_demo.gif&quot; alt=&quot;BM_Plugin_Demo&quot; /&gt;
 
   &lt;figcaption&gt;BM Plugin: gives you the ability to visually configure the Body Model.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -531,7 +531,7 @@ BM-statements.&lt;/p&gt;
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/Any_file.JPG&quot; alt=&quot;Any_file&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/Any_file.JPG&quot; alt=&quot;Any_file&quot; /&gt;
 
   &lt;figcaption&gt;Choose the .any file with which the plugin will interact.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -546,7 +546,7 @@ have no effect.&lt;/p&gt;
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/Include_Plugin.JPG&quot; alt=&quot;Include_Plugin&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/Include_Plugin.JPG&quot; alt=&quot;Include_Plugin&quot; /&gt;
 
   &lt;figcaption&gt;Include the .any file in AnyBody&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -568,7 +568,7 @@ statements you desire. Descriptions for each BM statement and for their availabl
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/Adv_tab.JPG&quot; alt=&quot;Adv_tab&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/Adv_tab.JPG&quot; alt=&quot;Adv_tab&quot; /&gt;
 
   &lt;figcaption&gt;The advanced tab of the plugin.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -604,7 +604,7 @@ Model’s script;&lt;/p&gt;
 
 &lt;p&gt;Now I think you know enough about the plugin to try it yourself, so what are you waiting for?&lt;/p&gt;
 
-&lt;p&gt;Any development suggestions and feedback are more than welcomed!&lt;/p&gt;</content><author><name>Ioan-Matei Sarivan</name></author><category term="Model configuration" /><category term="BM switches" /><summary type="html">This introduces a python application to help configure your model.</summary></entry><entry><title type="html">Add limits to the Range of Motion</title><link href="/tools/rom-limits/" rel="alternate" type="text/html" title="Add limits to the Range of Motion" /><published>2017-05-04T00:00:00+00:00</published><updated>2017-05-04T00:00:00+00:00</updated><id>/tools/rom-limits</id><content type="html" xml:base="/tools/rom-limits/">&lt;p&gt;In this post, I will show a new AnyScript class template to add range-of-motion
+&lt;p&gt;Any development suggestions and feedback are more than welcomed!&lt;/p&gt;</content><author><name>Ioan-Matei Sarivan</name></author><category term="Model configuration" /><category term="BM switches" /><summary type="html">This introduces a python application to help configure your model.</summary></entry><entry><title type="html">Add limits to the Range of Motion</title><link href="hhttps://melund.github.io/anyscript_test/tools/rom-limits/" rel="alternate" type="text/html" title="Add limits to the Range of Motion" /><published>2017-05-04T00:00:00+00:00</published><updated>2017-05-04T00:00:00+00:00</updated><id>hhttps://melund.github.io/anyscript_test/tools/rom-limits</id><content type="html" xml:base="hhttps://melund.github.io/anyscript_test/tools/rom-limits/">&lt;p&gt;In this post, I will show a new AnyScript class template to add range-of-motion
 limits to Human body model.&lt;/p&gt;
 
 &lt;p&gt;The implementation consist of two AnyScript class templates. A high
@@ -659,7 +659,7 @@ arguments for disabling individual joint limits:&lt;/p&gt;
 
 &lt;p&gt;The AnyScript template is &lt;a href=&quot;https://github.com/AnyBody/range-of-motion-limits&quot;&gt;hosted on GitHub&lt;/a&gt;,
 where you can find examples and documentation on the
-&lt;code class=&quot;highlighter-rouge&quot;&gt;class_template&lt;/code&gt; and the options which are available.&lt;/p&gt;</content><author><name>Søren Tørholm, PhD</name></author><category term="kinematics" /><category term="joints" /><summary type="html">In this post you will see how to add range-of-motion limits to your simulations.</summary></entry><entry><title type="html">Calculating the Instantaneous Axis of Rotation</title><link href="/tools/instantaneous-axis-of-rotation/" rel="alternate" type="text/html" title="Calculating the Instantaneous Axis of Rotation" /><published>2017-04-27T00:00:00+00:00</published><updated>2017-04-27T00:00:00+00:00</updated><id>/tools/instantaneous-axis-of-rotation</id><content type="html" xml:base="/tools/instantaneous-axis-of-rotation/">&lt;p&gt;The instantaneous axis of rotation between two bodies is a &lt;a href=&quot;https://scholar.google.dk/scholar?as_sdt=1,5&amp;amp;q=biomechanics+instantaneous+axis+of+rotation&amp;amp;hl=en&amp;amp;as_vis=1&quot;&gt;useful concept in
+&lt;code class=&quot;highlighter-rouge&quot;&gt;class_template&lt;/code&gt; and the options which are available.&lt;/p&gt;</content><author><name>Søren Tørholm, PhD</name></author><category term="kinematics" /><category term="joints" /><summary type="html">In this post you will see how to add range-of-motion limits to your simulations.</summary></entry><entry><title type="html">Calculating the Instantaneous Axis of Rotation</title><link href="hhttps://melund.github.io/anyscript_test/tools/instantaneous-axis-of-rotation/" rel="alternate" type="text/html" title="Calculating the Instantaneous Axis of Rotation" /><published>2017-04-27T00:00:00+00:00</published><updated>2017-04-27T00:00:00+00:00</updated><id>hhttps://melund.github.io/anyscript_test/tools/instantaneous-axis-of-rotation</id><content type="html" xml:base="hhttps://melund.github.io/anyscript_test/tools/instantaneous-axis-of-rotation/">&lt;p&gt;The instantaneous axis of rotation between two bodies is a &lt;a href=&quot;https://scholar.google.dk/scholar?as_sdt=1,5&amp;amp;q=biomechanics+instantaneous+axis+of+rotation&amp;amp;hl=en&amp;amp;as_vis=1&quot;&gt;useful concept in
 biomechanics&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;In this post, we will dig into how to calculate the instantaneous
@@ -699,7 +699,7 @@ velocity around the axis of rotation:&lt;/p&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation} \label{eq:1} \vec{v}_P = \vec{v}_C + \vec{\omega} \times \vec{r} \end{equation}&lt;/script&gt;
 
 &lt;figure class=&quot;align-center&quot; style=&quot;width: 400px&quot;&gt;
-    &lt;img src=&quot;/assets/images/posts/iaor_drawing.png&quot; alt=&quot;Axis drawing&quot; /&gt;
+    &lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/iaor_drawing.png&quot; alt=&quot;Axis drawing&quot; /&gt;
     &lt;figcaption&gt;Rigid body rotating around an axis of rotation.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -830,7 +830,7 @@ a short example on how to use the class:&lt;/p&gt;
 &lt;p&gt;That is all it takes. Here a how it looks for few very simple models:&lt;/p&gt;
 
 &lt;figure class=&quot;half&quot;&gt;
-    &lt;img src=&quot;/assets/images/posts/iaor_ball.gif&quot; /&gt;&lt;img src=&quot;/assets/images/posts/iaor_reffreames.gif&quot; /&gt;
+    &lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/iaor_ball.gif&quot; /&gt;&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/iaor_reffreames.gif&quot; /&gt;
     &lt;figcaption&gt;Two examples of displaying the instanteneous axis of rotation for two simple models.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -844,7 +844,7 @@ release of the AMMR, the class template can be downloaded from GitHub.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://physics.stackexchange.com/questions/173987/how-can-i-relate-linear-and-angular-motion-using-a-single-formula/174209#174209&quot;&gt;QA on Physics stackexchange&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Angular_velocity&quot;&gt;Wikipedia on angular velocity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Kinematics" /><summary type="html">The instantaneous axis of rotation between two bodies is a useful concept in biomechanics. In this post, we will dig into how to calculate the instantaneous axis of rotation.</summary></entry><entry><title type="html">AnyMoCap: A model framework motion caputure based models</title><link href="/anymocap/anymocap-motion-capture-framework/" rel="alternate" type="text/html" title="AnyMoCap: A model framework motion caputure based models" /><published>2017-04-25T00:00:00+00:00</published><updated>2017-04-25T00:00:00+00:00</updated><id>/anymocap/anymocap-motion-capture-framework</id><content type="html" xml:base="/anymocap/anymocap-motion-capture-framework/">&lt;p&gt;The AnyMoCap model is an effort to create a simple and unified framework for
+&lt;/ul&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Kinematics" /><summary type="html">The instantaneous axis of rotation between two bodies is a useful concept in biomechanics. In this post, we will dig into how to calculate the instantaneous axis of rotation.</summary></entry><entry><title type="html">AnyMoCap: A model framework motion caputure based models</title><link href="hhttps://melund.github.io/anyscript_test/anymocap/anymocap-motion-capture-framework/" rel="alternate" type="text/html" title="AnyMoCap: A model framework motion caputure based models" /><published>2017-04-25T00:00:00+00:00</published><updated>2017-04-25T00:00:00+00:00</updated><id>hhttps://melund.github.io/anyscript_test/anymocap/anymocap-motion-capture-framework</id><content type="html" xml:base="hhttps://melund.github.io/anyscript_test/anymocap/anymocap-motion-capture-framework/">&lt;p&gt;The AnyMoCap model is an effort to create a simple and unified framework for
 doing any kind of mocap analysis with the &lt;a href=&quot;http://anybodytech.com&quot;&gt;AnyBody Modeling
 System&lt;/a&gt;.&lt;/p&gt;
 
@@ -897,7 +897,7 @@ on specific features of the framework.&lt;/p&gt;
 &lt;p&gt;Examples are self-contained and could be locaated anywhere as long they have a
 valid reference link to where the AnyMoCap model is located on your computer.&lt;/p&gt;
 
-&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Motion Capture" /><summary type="html">Creating motion caputure based models is difficult. But this often what new users want to start out working on.</summary></entry><entry><title type="html">Notepad++ and AnyScript files</title><link href="/editors/notepad++-and-anyscript/" rel="alternate" type="text/html" title="Notepad++ and AnyScript files" /><published>2017-04-18T00:00:00+00:00</published><updated>2017-04-18T00:00:00+00:00</updated><id>/editors/notepad++-and-anyscript</id><content type="html" xml:base="/editors/notepad++-and-anyscript/">&lt;p&gt;In this post, I will show an extension to get syntax
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Motion Capture" /><summary type="html">Creating motion caputure based models is difficult. But this often what new users want to start out working on.</summary></entry><entry><title type="html">Notepad++ and AnyScript files</title><link href="hhttps://melund.github.io/anyscript_test/editors/notepad++-and-anyscript/" rel="alternate" type="text/html" title="Notepad++ and AnyScript files" /><published>2017-04-18T00:00:00+00:00</published><updated>2017-04-18T00:00:00+00:00</updated><id>hhttps://melund.github.io/anyscript_test/editors/notepad++-and-anyscript</id><content type="html" xml:base="hhttps://melund.github.io/anyscript_test/editors/notepad++-and-anyscript/">&lt;p&gt;In this post, I will show an extension to get syntax
 highlighting and code folding working for
 &lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;Notepad++&lt;/a&gt;. This the first post in a series on using external editors with the AnyBody
 Modeling System.&lt;/p&gt;
@@ -965,7 +965,7 @@ AnyScript files.&lt;/p&gt;
 &lt;img src=&quot;https://cloud.githubusercontent.com/assets/22542671/20789877/5b5ba2b4-b7b6-11e6-991a-1f85db8522a0.gif&quot; alt=&quot;column mode editing&quot; /&gt;
 
   &lt;figcaption&gt;The ability to write at multiple cursors or select a column of text is fantastic.&lt;/figcaption&gt;
-&lt;/figure&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Syntax highlighting" /><summary type="html">In this post, I will show an extension to get syntax highlighting and code folding working for Notepad++.</summary></entry><entry><title type="html">Create Animated GIFs</title><link href="/tips-n-tricks/create-animated-gifs/" rel="alternate" type="text/html" title="Create Animated GIFs" /><published>2017-04-10T00:00:00+00:00</published><updated>2017-04-10T00:00:00+00:00</updated><id>/tips-n-tricks/create-animated-gifs</id><content type="html" xml:base="/tips-n-tricks/create-animated-gifs/">&lt;p&gt;If a picture is worth a thousand words. What is the value of an animated GIF?&lt;/p&gt;
+&lt;/figure&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Syntax highlighting" /><summary type="html">In this post, I will show an extension to get syntax highlighting and code folding working for Notepad++.</summary></entry><entry><title type="html">Create Animated GIFs</title><link href="hhttps://melund.github.io/anyscript_test/tips-n-tricks/create-animated-gifs/" rel="alternate" type="text/html" title="Create Animated GIFs" /><published>2017-04-10T00:00:00+00:00</published><updated>2017-04-10T00:00:00+00:00</updated><id>hhttps://melund.github.io/anyscript_test/tips-n-tricks/create-animated-gifs</id><content type="html" xml:base="hhttps://melund.github.io/anyscript_test/tips-n-tricks/create-animated-gifs/">&lt;p&gt;If a picture is worth a thousand words. What is the value of an animated GIF?&lt;/p&gt;
 
 &lt;p&gt;If anyone knew the answer to this question it was 
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Eadweard_Muybridge&quot;&gt;Eadweard Muybridge&lt;/a&gt; 
@@ -976,12 +976,12 @@ today his short animations are iconic.&lt;/p&gt;
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/gif_muybridge_horse.gif&quot; alt=&quot;Muybridge animated horse&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/gif_muybridge_horse.gif&quot; alt=&quot;Muybridge animated horse&quot; /&gt;
 
   &lt;figcaption&gt;Galloping horse by Eadweard Muybridge.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;/tips-n-tricks/creating-videos-from-your-simulations/&quot;&gt;In a previous post&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;hhttps://melund.github.io/anyscript_test/tips-n-tricks/creating-videos-from-your-simulations/&quot;&gt;In a previous post&lt;/a&gt;
 I introduced an AnyScript class-template to create awesome
 videos of your musculoskeletal simulations with a single click. But sometimes
 videos are just not enough.&lt;/p&gt;
@@ -997,7 +997,7 @@ to dwell on the details.&lt;/p&gt;
 &lt;p&gt;Today I just added a new feature to the video plugin. The ability to create good
 looking GIF files directly from the video. After producing the video, it can be converted into a GIF file. Just run the operation &lt;code class=&quot;highlighter-rouge&quot;&gt;Operations.Convert_video_to_animated_gif&lt;/code&gt;&lt;/p&gt;
 
-&lt;p class=&quot;full&quot;&gt;&lt;img src=&quot;/assets/images/posts/gif-convert-operation.png&quot; alt=&quot;Convert GIF operation&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;full&quot;&gt;&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/gif-convert-operation.png&quot; alt=&quot;Convert GIF operation&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Creating good looking GIF is more tricky than it may seem. The number of
 possible colors is limited to 256 in a GIF file. Thus, it is important to
@@ -1035,7 +1035,7 @@ documentation on the &lt;code class=&quot;highlighter-rouge&quot;&gt;class_templ
 
 &lt;figure&gt;
   
-&lt;img src=&quot;/assets/images/posts/video_human.gif&quot; alt=&quot;Human gif file&quot; /&gt;
+&lt;img src=&quot;hhttps://melund.github.io/anyscript_test/assets/images/posts/video_human.gif&quot; alt=&quot;Human gif file&quot; /&gt;
 
   &lt;figcaption&gt;Animated GIF file, where the camera is spinning around the model.&lt;/figcaption&gt;
 &lt;/figure&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Creating Videos" /><summary type="html">If a picture is worth a thousand words. What is the value of an animated GIF?</summary></entry></feed>
