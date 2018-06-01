@@ -1,0 +1,761 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Calculating the Instantaneous Axis of Rotation - AnyScript Community</title>
+<meta name="description" content="The instantaneous axis of rotation between two bodies is a useful concept in biomechanics. In this post, we will dig into how to calculate the instantaneous axis of rotation.">
+
+
+  <meta name="author" content="Morten Enemark Lund">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AnyScript Community">
+<meta property="og:title" content="Calculating the Instantaneous Axis of Rotation">
+<meta property="og:url" content="/tools/instantaneous-axis-of-rotation/">
+
+
+  <meta property="og:description" content="The instantaneous axis of rotation between two bodies is a useful concept in biomechanics. In this post, we will dig into how to calculate the instantaneous axis of rotation.">
+
+
+
+  <meta property="og:image" content="/assets/images/posts/iaor_teaser.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2017-04-27T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/tools/instantaneous-axis-of-rotation/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": null,
+      "logo": "/assets/images/anyscript_logo_community.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "AnyBody Technology",
+      "url": null,
+      "sameAs": {"linkedin":"https://www.linkedin.com/company/anybody-technology-a-s","github":"https://github.com/anybody","youtube":"https://www.youtube.com/user/anybodytech","facebook":"https://www.facebook.com/groups/AnyBodyGroup/"}
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AnyScript Community Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#b91d47">
+<link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+<meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<style type="text/css">
+#watermark {
+  color: #e0e0e0;
+  font-size: 200pt;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  position: fixed;
+  min-height:50%; 
+  min-width:50%;
+  margin: 0;
+  z-index: -1;
+  left:50;
+  top:50;
+}
+</style>
+
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/"><img src="/assets/images/anyscript_logo.svg" height="200" width="180" align="top"/></a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/people/mel.jpg" alt="Morten Enemark Lund" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Morten Enemark Lund</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        R&D Engineer at AnyBody Technology.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Aalborg, Denmark</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://keybase.io/mortenlund" itemprop="sameAs">
+            <i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/biomedical" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/melund" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Calculating the Instantaneous Axis of Rotation">
+    <meta itemprop="description" content="The instantaneous axis of rotation between two bodies is a useful concept in biomechanics. In this post, we will dig into how to calculate the instantaneous axis of rotation.">
+    <meta itemprop="datePublished" content="April 27, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Calculating the Instantaneous Axis of Rotation
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>The instantaneous axis of rotation between two bodies is a <a href="https://scholar.google.dk/scholar?as_sdt=1,5&amp;q=biomechanics+instantaneous+axis+of+rotation&amp;hl=en&amp;as_vis=1">useful concept in
+biomechanics</a>.</p>
+
+<p>In this post, we will dig into how to calculate the instantaneous
+axis of rotation and show an AnyScript <code class="highlighter-rouge">class_template</code> that calculate and displays the
+axis between any two reference frames in the AnyBody
+Modeling System.</p>
+
+<p>Before we dive into the AnyScript implementation let us look briefly at the math
+behind the instantaneous axis of rotation.</p>
+
+<h2 id="rigid-body-motion-in-3d">Rigid body motion in 3D</h2>
+
+<p>We can view any displacement of a body in a three-dimensional space as a
+rotation around a <a href="https://en.wikipedia.org/wiki/Euler%27s_rotation_theorem">single axis and a translation along that
+axis</a>. This gives rise
+to the idea of a screw motion in 3D along what is also called the helical axis.
+If we split the movement up into infinitesimally small movements each of these
+will have an rotation axis and a linear velocity along that axis. This is the
+instantaneous axis of rotation, and as the name indicate will change direction
+and location as the object moves.</p>
+
+<p>The angular velocity of rigid body is a vector quantity shared by all point of
+the rigid body. My old engineering math book defines it from the rate of change
+of the rotation matrix $R$:</p>
+
+<script type="math/tex; mode=display">\frac{ {\mathrm d} }{ {\mathrm d}t}R = \vec{\omega} \times R</script>
+
+<p>If we know the angular and linear velocity of any point on a rigid body, we can
+calculate the properties of the screw motion and the instantaneous axis of
+rotation.</p>
+
+<p>Using $\vec{\omega}$ we can write the velocity $\vec{v}_P$ of a point $P$ at
+some distance $\vec{r}$ from the instantaneous axis of rotation as a sum of the
+linear velocity $\vec{v}_C$ along the axis of rotation and the tangential
+velocity around the axis of rotation:</p>
+
+<script type="math/tex; mode=display">\begin{equation} \label{eq:1} \vec{v}_P = \vec{v}_C + \vec{\omega} \times \vec{r} \end{equation}</script>
+
+<figure class="align-center" style="width: 400px">
+    <img src="/assets/images/posts/iaor_drawing.png" alt="Axis drawing" />
+    <figcaption>Rigid body rotating around an axis of rotation.</figcaption>
+</figure>
+
+<p>Similarly we can also calculate backwards and find the intantanous axis of
+rotation at some distance $-\vec{r}$ from any point if we know the linear
+velocity of the point and the angular velocity. This is given by:</p>
+
+<script type="math/tex; mode=display">\begin{equation} \label{eq:2} -\vec{r}= \frac{\vec{\omega} \times \vec{v}_P }{
+\vec{\omega}\cdot\vec{\omega} } \end{equation}</script>
+
+<p>Thus if know the position of a point $\vec{r}_P$, its 
+linear velocity $\vec{v}_P$ we can find closest point
+$\vec{r}_C$ on the rotation axis as:</p>
+
+<script type="math/tex; mode=display">\vec{r}_C = \vec{r}_P - \vec{r} = \vec{r}_P + \frac{\vec{\omega}\times\vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }</script>
+
+<blockquote>
+  <p><strong>Short proof of $\ref{eq:2}$, skip it if you like:</strong></p>
+
+  <p>Start with $\vec{\omega} \times \vec{v}_P$ and insert $\ref{eq:1}$. Since
+$\vec{\omega}$ and $\vec{v}_C$ are parallel their cross product cancel out.</p>
+
+  <script type="math/tex; mode=display">\require{cancel} \vec{\omega} \times \vec{v}_P = \vec{\omega} \times (\vec{v}_C+\vec{\omega} \times \vec{r})= \cancel{\vec{\omega} \times \vec{v}_C}+\vec{\omega}\times (\vec{\omega} \times \vec{r})</script>
+
+  <p>Next we use the <a href="https://en.wikipedia.org/wiki/Triple_product#Vector_triple_product">vector tripple product</a> to expand, and we note that $\vec{\omega}\cdot\vec{r}$ cancel out since the shortest vector from the rotation axis to any point is always perpendicular to angular velocity:</p>
+
+  <script type="math/tex; mode=display">\require{cancel}\vec{\omega}\times (\vec{\omega} \times \vec{r}) = \vec{\omega}(\cancel{\vec{\omega}\cdot\vec{r} })-\vec{r}(\vec{\omega}\cdot\vec{\omega})</script>
+
+  <p>Finally we have:</p>
+
+  <script type="math/tex; mode=display">\vec{\omega} \times \vec{v}_P = -\vec{r}(\vec{\omega}\cdot\vec{\omega}) \Leftrightarrow -\vec{r}= \frac{\vec{\omega} \times \vec{v}_P }{
+\vec{\omega}\cdot\vec{\omega} }</script>
+
+  <h3 id="disclaimer">Disclaimer:</h3>
+
+  <p>The math may not be strictly accurate. Sorry, I am an Engineer :) If
+you have more math skill than I please help make this more concise.</p>
+</blockquote>
+
+<h2 id="properties">Properties</h2>
+
+<p>If for example, we have a rigid body with angular velocity $\vec{\omega}$ and
+some point $P$ with position $\vec{r}_P$ and velocity $\vec{v}_p$ then we can
+define the different properties:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><script type="math/tex">\omega = |\vec{\omega}|</script></td>
+      <td>The magnitude of angular rotation.</td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">\vec{e}_{IOAR} = \frac{\vec{\omega} }{\omega}</script></td>
+      <td>The direction of the intantanous axis of rotation.</td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">\vec{r}_C = \vec{r}_P + \frac{\vec{\omega}\times\vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }</script></td>
+      <td>The point C on the intantanous axis of rotation.</td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">h = \frac{\vec{\omega} \cdot \vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }</script></td>
+      <td>Ratio of angular to linear angular velocity</td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">\vec{v}_C = h\vec{\omega}</script></td>
+      <td>The linear velocity at point $C$ along the axis of rotation.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="notice">The list of properties is inspired by this answer from <a href="https://physics.stackexchange.com/questions/173987/how-can-i-relate-linear-and-angular-motion-using-a-single-formula/174209#174209">StackExchange
+Physics</a></p>
+
+<p>All we need to know is the rotation velocity of a body and the velocity of any
+point to find the instantaneous axis of rotation.</p>
+
+<h2 id="anyscript-implementation">AnyScript implementation</h2>
+
+<p>In AnyScript we can easily find the angular velocity, and the linear velocity of
+a reference frame using the two classes <code class="highlighter-rouge">AnyKinRotational</code> and <code class="highlighter-rouge">AnyKinLinear</code>.</p>
+
+<p>An implementaion to find the instantanous axis of rotation could be as simple
+as:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">AnyKinRotational</span> <span class="n">Rotational</span> <span class="o">=</span><span class="p">{</span>
+     <span class="n">AngVelOnOff</span> <span class="o">=</span> <span class="n">On</span><span class="p">;</span>
+     <span class="n">AnyRefFrame</span><span class="o">&amp;</span> <span class="n">Ref1</span><span class="o">=</span> <span class="p">.</span><span class="n">ReferenceFrame</span><span class="p">;</span>
+   <span class="p">};</span> 
+
+   <span class="n">AnyKinLinear</span> <span class="n">Linear</span> <span class="o">=</span><span class="p">{</span>
+     <span class="n">Ref</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+     <span class="n">AnyRefFrame</span><span class="o">&amp;</span> <span class="n">Ref1</span><span class="o">=</span> <span class="p">.</span><span class="n">ReferenceFrame</span><span class="p">;</span>
+   <span class="p">};</span>
+   
+   <span class="c1">/// Direction of the instantaneous axis of rotation</span>
+   <span class="n">AnyVec3</span> <span class="n">e_iaor</span> <span class="o">=</span> <span class="n">Rotational</span><span class="p">.</span><span class="n">Vel</span><span class="o">/</span><span class="n">vnorm</span><span class="p">(</span><span class="n">Rotational</span><span class="p">.</span><span class="n">Vel</span><span class="p">)</span>
+
+   <span class="c1">/// The point on the rotation axis closest to ReferenceFrame origin</span>
+   <span class="n">AnyVec3</span> <span class="n">r_iaor</span> <span class="o">=</span> <span class="n">Linear</span><span class="p">.</span><span class="n">Pos</span> <span class="o">+</span> <span class="n">cross</span><span class="p">(</span><span class="n">Rotational</span><span class="p">.</span><span class="n">Vel</span><span class="p">,</span> <span class="n">Linear</span><span class="p">.</span><span class="n">Vel</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">vnorm</span><span class="p">(</span><span class="n">Rotational</span><span class="p">.</span><span class="n">Vel</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>It is important to set <code class="highlighter-rouge">AngVelOnOff = On;</code> to make <code class="highlighter-rouge">AnyKinRotational</code> output the
+angular velocity vector. Of course this the code above is very simplified. We
+would also like a way to find the axis between between two moving bodies, and
+also draw the axis in the process.</p>
+
+<h3 id="anyscript-class-template">AnyScript class template</h3>
+
+<p>We have created a custom class template that makes it easy to calculate the
+properties listed above and display the instantaneous axis of rotation. Here is
+a short example on how to use the class:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "path/to/InstantaneousAxisOfRotation.any"
+</span>
+<span class="n">Main</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">InstantaneousAxisOfRotation</span> <span class="n">IAOR</span> <span class="p">(</span>
+      <span class="n">Body1</span> <span class="o">=</span> <span class="p">.</span><span class="n">Segments</span><span class="p">.</span><span class="n">Ground</span><span class="p">,</span>
+      <span class="n">Body2</span> <span class="o">=</span> <span class="p">.</span><span class="n">Segments</span><span class="p">.</span><span class="n">Ball</span>
+  <span class="p">)</span> <span class="o">=</span> <span class="p">{</span>   <span class="p">};</span>
+</code></pre></div></div>
+
+<p>That is all it takes. Here a how it looks for few very simple models:</p>
+
+<figure class="half">
+    <img src="/assets/images/posts/iaor_ball.gif" /><img src="/assets/images/posts/iaor_reffreames.gif" />
+    <figcaption>Two examples of displaying the instanteneous axis of rotation for two simple models.</figcaption>
+</figure>
+
+<p>The code will eventually become part of the AnyBody Managed Model Repository
+(AMMR), which is shipped with the AnyBody Modeling System. But until the next
+release of the AMMR, the class template can be downloaded from GitHub.</p>
+
+<p><a href="https://github.com/AnyBody/iaor" class="btn btn--success btn--large"><i class="fa fa-github"></i> Get IAOR class template</a></p>
+
+<h2 id="references">References:</h2>
+<ul>
+  <li><a href="https://physics.stackexchange.com/questions/173987/how-can-i-relate-linear-and-angular-motion-using-a-single-formula/174209#174209">QA on Physics stackexchange</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Angular_velocity">Wikipedia on angular velocity</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#kinematics" class="page__taxonomy-item" rel="tag">Kinematics</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#tools" class="page__taxonomy-item" rel="tag">Tools</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-27T00:00:00+00:00">April 27, 2017</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Calculating+the+Instantaneous+Axis+of+Rotation%20%2Ftools%2Finstantaneous-axis-of-rotation%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Ftools%2Finstantaneous-axis-of-rotation%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=%2Ftools%2Finstantaneous-axis-of-rotation%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Ftools%2Finstantaneous-axis-of-rotation%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/anymocap/anymocap-motion-capture-framework/" class="pagination--pager" title="AnyMoCap: A model framework motion caputure based models
+">Previous</a>
+    
+    
+      <a href="/tools/rom-limits/" class="pagination--pager" title="Add limits to the Range of Motion
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+        
+        
+        
+        
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/posts/tutorials_teaser.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/news/freeing-the-anybody-tutorials/" rel="permalink">Freeing the AnyBody Tutorials
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Anyone, who works with AnyBody modeling system has at one time used the the AnyBody tutorials. They are a valuable resources when learning to use the AnyBody...</p>
+  </article>
+</div>
+        
+        
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/posts/vscode-teaser.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/editors/anyscript-in-vscode/" rel="permalink">AnyScript support in Visual Studio Code
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.
+</p>
+  </article>
+</div>
+        
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/anybody"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+      <li><a href="https://www.linkedin.com/company/anybody-technology-a-s"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> Linkedin</a></li>
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Morten Enemark Lund. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: 'none',
+    tex2jax: {
+      inlineMath: [['$','$']],
+      displayMath: [['$$','$$']],
+      processEnvironments: false
+    },
+    // show equation numbers
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    'HTML-CSS': {
+      imageFont: null
+    }
+  });
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,621 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Notepad++ and AnyScript files - AnyScript Community</title>
+<meta name="description" content="In this post, I will show an extension to get syntax highlighting and code folding working for Notepad++.">
+
+
+  <meta name="author" content="Morten Enemark Lund">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AnyScript Community">
+<meta property="og:title" content="Notepad++ and AnyScript files">
+<meta property="og:url" content="/editors/notepad++-and-anyscript/">
+
+
+  <meta property="og:description" content="In this post, I will show an extension to get syntax highlighting and code folding working for Notepad++.">
+
+
+
+  <meta property="og:image" content="/assets/images/posts/npp-teaser.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2017-04-18T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/editors/notepad++-and-anyscript/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": null,
+      "logo": "/assets/images/anyscript_logo_community.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "AnyBody Technology",
+      "url": null,
+      "sameAs": {"linkedin":"https://www.linkedin.com/company/anybody-technology-a-s","github":"https://github.com/anybody","youtube":"https://www.youtube.com/user/anybodytech","facebook":"https://www.facebook.com/groups/AnyBodyGroup/"}
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AnyScript Community Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#b91d47">
+<link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+<meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<style type="text/css">
+#watermark {
+  color: #e0e0e0;
+  font-size: 200pt;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  position: fixed;
+  min-height:50%; 
+  min-width:50%;
+  margin: 0;
+  z-index: -1;
+  left:50;
+  top:50;
+}
+</style>
+
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/"><img src="/assets/images/anyscript_logo.svg" height="200" width="180" align="top"/></a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/people/mel.jpg" alt="Morten Enemark Lund" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Morten Enemark Lund</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        R&D Engineer at AnyBody Technology.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Aalborg, Denmark</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://keybase.io/mortenlund" itemprop="sameAs">
+            <i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/biomedical" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/melund" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Notepad++ and AnyScript files">
+    <meta itemprop="description" content="In this post, I will show an extension to get syntax highlighting and code folding working for Notepad++.">
+    <meta itemprop="datePublished" content="April 18, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Notepad++ and AnyScript files
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In this post, I will show an extension to get syntax
+highlighting and code folding working for
+<a href="https://notepad-plus-plus.org/">Notepad++</a>. This the first post in a series on using external editors with the AnyBody
+Modeling System.</p>
+
+<h2 id="why-another-editor">Why another editor?</h2>
+
+<p>I shall be the first to admit that the editor in the AnyBody Modeling System
+(AMS) can feel very limited at times. It does have some crucial features like
+integration with the model tree. Even though some of these functions are
+indispensable when debugging models, the features of the editor in itself are
+pretty basic.</p>
+
+<p>So when I write, edit or format AnyScript code I look for something more
+productive. Luckily, there are much more powerful alternatives available. Maybe
+you have heard about trending editors like <a href="https://atom.io/">Atom</a>, <a href="https://www.sublimetext.com/">Sublime
+Text</a>, <a href="https://code.visualstudio.com/">VS Code</a>?
+Or perhaps a bit older options like <a href="https://notepad-plus-plus.org/">notepad++</a>?
+All are text editors which many developers couldn’t live without.</p>
+
+<p>Modern text editors have become popular for very good reasons. They are fast,
+lightweight, and powerful and they are not limited to a particular programming
+language like most integrated developer environments (IDE). If you ever used
+some of these powerful text editors, it can be hard to live without the features
+they provide.</p>
+
+<h1 id="anyscript-support-in-notepad">AnyScript support in Notepad++</h1>
+
+<p>Notepad++ was my favorite text editor for many years and I often still use it.
+It is fast and works well on Windows. To enable AnyScript support in Notepad++
+you need to the install AnyScript language extension.</p>
+
+<p>You can find the extension on the <a href="https://github.com/AnyBody/support/wiki/Using-Notepad---to-edit-AnyScipt">AnyScript wiki
+site</a>,
+or download it here directly:</p>
+
+<p><a href="https://raw.githubusercontent.com/AnyBody/support/master/Wiki_Files/Using_Notepad/AnyScript.xml" class="btn btn--success btn--large"><i class="fa fa-download"></i> Download AnyScript
+Notepad++</a></p>
+
+<p>Save the file <code class="highlighter-rouge">AnyScript.xml</code> to your computer. Open Notepad++ and select the menu: “Language”-&gt;”Define your language” and click import…</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/22542671/20790053/f6378fe6-b7b6-11e6-9379-3d6b2f6f9b49.png" alt="image" /></p>
+
+<p>With the extension in place AnyScript code will highlight correctly, and braces
+will match up. And it is possible to collapse pairs of braces <code class="highlighter-rouge">{</code>/<code class="highlighter-rouge">}</code>, as well
+as pairs of <code class="highlighter-rouge">#if</code>/<code class="highlighter-rouge">#endif</code>. That is huge advantage when working with very big
+AnyScript files.</p>
+
+<h3 id="why-is-notepad-usefull">Why is Notepad++ usefull</h3>
+
+<p>The main benefits are:</p>
+
+<ul>
+  <li>Effective search replace with regex</li>
+  <li>Code folding</li>
+  <li>Syntax highlighting</li>
+  <li>Macro recording/playback</li>
+  <li><a href="http://notepad-plus-plus.org/features/multi-editing.html">Multi editing</a></li>
+  <li>Document map</li>
+</ul>
+
+<p>To really understand the power of notepad++ see this example of column mode editing:</p>
+
+<figure>
+  
+<img src="https://cloud.githubusercontent.com/assets/22542671/20789877/5b5ba2b4-b7b6-11e6-991a-1f85db8522a0.gif" alt="column mode editing" />
+
+  <figcaption>The ability to write at multiple cursors or select a column of text is fantastic.</figcaption>
+</figure>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#syntax-highlighting" class="page__taxonomy-item" rel="tag">Syntax highlighting</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#editors" class="page__taxonomy-item" rel="tag">Editors</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-18T00:00:00+00:00">April 18, 2017</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Notepad%2B%2B+and+AnyScript+files%20%2Feditors%2Fnotepad%2B%2B-and-anyscript%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Feditors%2Fnotepad%2B%2B-and-anyscript%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=%2Feditors%2Fnotepad%2B%2B-and-anyscript%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Feditors%2Fnotepad%2B%2B-and-anyscript%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tips-n-tricks/create-animated-gifs/" class="pagination--pager" title="Create Animated GIFs
+">Previous</a>
+    
+    
+      <a href="/anymocap/anymocap-motion-capture-framework/" class="pagination--pager" title="AnyMoCap: A model framework motion caputure based models
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+        
+        
+        
+        
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/posts/tutorials_teaser.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/news/freeing-the-anybody-tutorials/" rel="permalink">Freeing the AnyBody Tutorials
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Anyone, who works with AnyBody modeling system has at one time used the the AnyBody tutorials. They are a valuable resources when learning to use the AnyBody...</p>
+  </article>
+</div>
+        
+        
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/posts/vscode-teaser.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/editors/anyscript-in-vscode/" rel="permalink">AnyScript support in Visual Studio Code
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.
+</p>
+  </article>
+</div>
+        
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/anybody"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+      <li><a href="https://www.linkedin.com/company/anybody-technology-a-s"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> Linkedin</a></li>
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Morten Enemark Lund. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

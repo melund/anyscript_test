@@ -1,0 +1,824 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Useful AnyScript Macros - AnyScript Community</title>
+<meta name="description" content="Some usefull code macros when working with AnyScript.">
+
+
+  <meta name="author" content="Morten Enemark Lund">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AnyScript Community">
+<meta property="og:title" content="Useful AnyScript Macros">
+<meta property="og:url" content="/tips-n-tricks/useful-anyscript-macros/">
+
+
+  <meta property="og:description" content="Some usefull code macros when working with AnyScript.">
+
+
+
+  <meta property="og:image" content="/assets/images/macro_post_teaser.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2017-01-06T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/tips-n-tricks/useful-anyscript-macros/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": null,
+      "logo": "/assets/images/anyscript_logo_community.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "AnyBody Technology",
+      "url": null,
+      "sameAs": {"linkedin":"https://www.linkedin.com/company/anybody-technology-a-s","github":"https://github.com/anybody","youtube":"https://www.youtube.com/user/anybodytech","facebook":"https://www.facebook.com/groups/AnyBodyGroup/"}
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AnyScript Community Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#b91d47">
+<link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+<meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<style type="text/css">
+#watermark {
+  color: #e0e0e0;
+  font-size: 200pt;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  position: fixed;
+  min-height:50%; 
+  min-width:50%;
+  margin: 0;
+  z-index: -1;
+  left:50;
+  top:50;
+}
+</style>
+
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/"><img src="/assets/images/anyscript_logo.svg" height="200" width="180" align="top"/></a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/people/mel.jpg" alt="Morten Enemark Lund" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Morten Enemark Lund</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        R&D Engineer at AnyBody Technology.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Aalborg, Denmark</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://keybase.io/mortenlund" itemprop="sameAs">
+            <i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/biomedical" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/melund" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Useful AnyScript Macros">
+    <meta itemprop="description" content="Some usefull code macros when working with AnyScript.">
+    <meta itemprop="datePublished" content="January 06, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Useful AnyScript Macros
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>AnyBody makes it easy to do musculoskeletal modelling, but some tasks which are simple in 
+normal programming languages (i.e. C, Matlab, Python) can be hard to accomplish in AnyScript. 
+This could be simple tasks like:</p>
+
+<ul>
+  <li>Creating an abitrary matrix of zeros</li>
+  <li>Adding a constant to single row in a matrix</li>
+  <li>Change a single value in matrix</li>
+  <li>Thresholding a vector</li>
+</ul>
+
+<p>These are all easy with traditional programming constructs like for-loops and if-else clauses etc.</p>
+
+<p>The reason that such tasks are hard is that AnyScript is not a traditional programming language. 
+For-loops and sequential algorithms are not allowed because AnyScript is a modelling language 
+(or a declarative language). That is in contrast to most other programming languages which are 
+imperative (i.e., implements a sequence of commands). This distinction can sometimes be hard for 
+new users to grasp. But keep in mind that the declarative nature of AnyScript is also what makes 
+AnyBody so compelling.</p>
+
+<p class="notice--info"><strong>Notice!</strong> Although it is not the topic of this blog post, it is possible to call external C or Python functions to do stuff which is otherwise impossible in AnyScript.</p>
+
+<h3 id="creating-a-nxm-matrix">Creating a NxM matrix</h3>
+
+<p>However, with a little ingenuity, many things can also be accomplished directly in AnyScript. For example, let us create a to create a <code class="highlighter-rouge">MxN</code> matrix of zeros using the matrix product of two vectors.</p>
+
+<ol>
+  <li>
+    <p>First, we create two vectors of length <code class="highlighter-rouge">M</code> and <code class="highlighter-rouge">N</code> with the <code class="highlighter-rouge">iarr()</code> function</p>
+
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AnyInt</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">AnyInt</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="n">AnyVar</span> <span class="n">v1</span> <span class="o">=</span> <span class="n">iarr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span> <span class="c1">// {1,2,3}</span>
+<span class="n">AnyVar</span> <span class="n">v2</span> <span class="o">=</span> <span class="n">iarr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span> <span class="c1">// {1,2,3,4} </span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Then we take the matrix product of the vectors to create a matrix.</p>
+
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AnyVar</span> <span class="n">Mat</span> <span class="o">=</span> <span class="n">v1</span><span class="err">'</span><span class="o">*</span><span class="p">{</span><span class="n">v1</span><span class="p">};</span> <span class="c1">// {{1,2,3,4},{2,4,6,8},{3,6,9,12}} </span>
+</code></pre></div>    </div>
+    <p>  Here we have to tranpose <code class="highlighter-rouge">v1</code> to make a 3x1 column maxtrix, and wrap <code class="highlighter-rouge">v2</code> in an extra brace to make it an 1x4 row matrix.
+Their product is then a 4x3 matrix.</p>
+  </li>
+  <li>
+    <p>Finally, we can multiply it with zero to make zero matrix</p>
+
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AnyVar</span> <span class="n">zeromat</span> <span class="o">=</span> <span class="n">Mat</span><span class="o">*</span><span class="mf">0.0</span><span class="p">;</span> <span class="c1">// {{0,0,0,0},{0,0,0,0},{0,0,0,0}} </span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Using workarounds like this can make the code very unreadable. Luckily, we can wrap the expression in a code macro and reuse it like a small function.</p>
+
+<h3 id="code-macros">Code macros</h3>
+
+<p>Code macros in AnyScript are exactly as in C and C++. They make complex expresions easier to reuse and read. The syntax is also very similar.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define ZEROS(M,N) (0.0*iarr(1,M)'*{iarr(1,N)})
+</span>
+<span class="n">AnyVar</span> <span class="n">mat</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">ZEROS</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>   <span class="c1">// {{3,3,3},{3,3,3},{3,3,3}} </span>
+
+</code></pre></div></div>
+
+<p class="notice">The <code class="highlighter-rouge">ZEROS()</code> function is arguably something that should have been a built-in function of AnyScript ( And maybe it will be soon )</p>
+
+<p>Here is a summery of myfavorite code macros that make it easiser to work with AnyBody. 
+You can find their implementatin further down:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Macro</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">ZEROS(M,N)</code></td>
+      <td>MxN zero matrix</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ONES(M,N)</code></td>
+      <td>MxN ones matrix</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">EYE(M)</code></td>
+      <td>Square identity matrix</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">REPVEC(V,N)</code></td>
+      <td>Repeats a vector or matrix along the second dimension</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ONES_J(M,N,J)</code></td>
+      <td>Matrix with ones in j’th coloumn and zero else where</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ONES_I(M,N,I)</code></td>
+      <td>Matrix with ones in I’th coloumn and zero else where</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ONES_IJ(M,N,I,J)</code></td>
+      <td>Mmatrix with a one in the i,j element zeros else where</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">SMOOTHERSTEP(edge0, edge1, val)</code></td>
+      <td>Smooth step function from 0.0 at edge0 to 1.0 at edge1. The function has first and second derivatives equal to zero at the edge values. <code class="highlighter-rouge">val</code> can be both a sigal value or vector.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="notice--warning"><strong>Notice!</strong> All the examples shown here are designed to work with AnyBody version 6.1.</p>
+
+<h3 id="the-helper-macros-include-file">The helper macros include file</h3>
+
+<p>All the macros are defined in the file below. Just download the file and include it in your application:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "helper_macros.any"
+</span></code></pre></div></div>
+
+<p>Also, the file is hosted as a Gist on GitHub. So feel free to contribute if you have more useful AnyScript macros.</p>
+
+<noscript><pre>// This file contains usefull macro functions for the AnyBody Modeling system. 
+#ifndef _HELPER_MACORS_ANY_
+#define _HELPER_MACORS_ANY_
+
+// Running number to compare file versions.
+#define _HELPER_MACORS_ANY_VERSION 3
+
+
+// Inline implemention of an MxN zero matrix
+#define ZEROS(M,N) reshape(0.0*iarr(0,(M)*(N)-1),{M,N})
+
+// Inline implemention of an MxN ones matrix
+#define ONES(M,N) (1+reshape(0.0*iarr(0,(M)*(N)-1),{M,N}))
+
+// Inline implemention of an square identity matrix
+#define EYE(M) eqfun(floor(div(1.0*reshape(iarr(0,round((M)^2-1)),{M,M}),(M)+1)),div(1.0*reshape(iarr(0,round((M)^2-1)),{M,M}),(M)+1))
+
+// Repeats a vector or matrix along the second dimension
+// REPVEC({1,2,3},2)  : {{1,2,3},{1,2,3}}
+// REPVEC({1,2,3},2)&#39; : {{1,1},{2,2},{3,3}}
+#define REPVEC(V,N) (ONES(N,1)*{flatten(V)})
+
+// Inline implementation of matrix with ones in j&#39;th coloumn and zero else where 
+#define ONES_J(M,N,J)  eqfun((1+0.0*iarr(0, M)&#39;)*{iarr(0,N)},J) 
+
+// Inline implementation of matrix with ones in i&#39;th row and zeros else where 
+#define ONES_I(M,N,I)  (eqfun((1+0.0*iarr(0, N)&#39;)*{iarr(0,M)},I)&#39;) //&#39;
+
+// Inline implementation of matrix with a one in the i,j element zeros else where 
+#define ONES_IJ(M,N,I,J) eqfun(reshape(iarr(0,floor((M)*(N)-1.0)),{floor(1.0*M),floor(1.0*N)}),floor(1.0*(I*(N))+(J)))
+
+// Simple linspace implementatation
+#define _LINSPACE(START, STOP, NUM) iarr(0, floor(1.0*(NUM-1)))*(1.0*(STOP)-1.0*(START))/(floor(1.0*(NUM))-1)+START
+
+// Linspace which ensures that the last point is exactly STOP.
+#define LINSPACE(START, STOP, NUM ) mult(not(ONES_IJ(1, NUM, 0, NUM-1)[0]), _LINSPACE(START, STOP, NUM))+ ONES_IJ(1, NUM, 0, NUM-1)[0]*STOP
+
+
+/*
+// Inline AnyScript implementation of the following C++ function: 
+// https://en.wikipedia.org/wiki/Smoothstep
+float smootherstep(float edge0, float edge1, float x)
+{
+    // Scale, and clamp x to 0..1 range
+    x = clamp((x - edge0)/(edge1 - edge0), 0.0, 1.0);
+    // Evaluate polynomial
+    return x*x*x*(x*(x*6 - 15) + 10);
+}
+*/
+// 1st and 2nd order derivatives at edge0 and edge1 are 0
+#define SMOOTHERSTEP(edge0, edge1, val) mult(iffun(ltfun(((val)-(edge0))/((edge1)-(edge0)),0.0), 0*(val), iffun(gtfun(((val)-(edge0))/((edge1)-(edge0)),1.0),0*(val)+1.0, ((val)-(edge0))/((edge1)-(edge0))))\
+                                       ,mult(iffun(ltfun(((val)-(edge0))/((edge1)-(edge0)),0.0), 0*(val), iffun(gtfun(((val)-(edge0))/((edge1)-(edge0)),1.0),0*(val)+1.0, ((val)-(edge0))/((edge1)-(edge0))))\
+                                       ,mult(iffun(ltfun(((val)-(edge0))/((edge1)-(edge0)),0.0), 0*(val), iffun(gtfun(((val)-(edge0))/((edge1)-(edge0)),1.0),0*(val)+1.0, ((val)-(edge0))/((edge1)-(edge0))))\
+                                       ,(mult(iffun(ltfun(((val)-(edge0))/((edge1)-(edge0)),0.0), 0*(val), iffun(gtfun(((val)-(edge0))/((edge1)-(edge0)),1.0),0*(val)+1.0, ((val)-(edge0))/((edge1)-(edge0))))\
+                                       ,(iffun(ltfun(((val)-(edge0))/((edge1)-(edge0)),0.0), 0*(val), iffun(gtfun(((val)-(edge0))/((edge1)-(edge0)),1.0),0*(val)+1.0, ((val)-(edge0))/((edge1)-(edge0))))\
+                                        *6 - 15)) + 10)  )))
+
+     
+                                        
+                                     
+
+/*
+// Inline AnyScript implementation of the following c++ function. 
+This is just half a smoother step function which continues liniearly when it
+reaches it steepest value.
+float smoothramp(float edge0, float edge1, float x)
+{
+    // Scale, and clamp x to 0..1 range
+    x = clamp((x - edge0)/(2*(edge1 - edge0)), 0.0, 0.5);
+    // Evaluate polynomial
+    if (x &lt; 0.5) {
+      return x*x*x*(x*(x*6 - 15) + 10)
+    }
+    else {
+      return 2*x - 0.5
+    };
+};
+*/
+
+// 1st and 2nd order derivatives at edge0 are 0
+#define SMOOTHRAMP(edge0, edge1, val) 2*iffun(gtfun(((val)-(edge0))/(2*((edge1)-(edge0))), 0.5), -0.5+2*(((val)-(edge0))/(2*((edge1)-(edge0)))),\
+                                        mult(iffun(ltfun(((val)-(edge0))/(2*((edge1)-(edge0))),0.0), 0*(val), iffun(gtfun(((val)-(edge0))/(2*((edge1)-(edge0))),0.5),0*(val)+0.5, ((val)-(edge0))/(2*((edge1)-(edge0)))))\
+                                       ,mult(iffun(ltfun(((val)-(edge0))/(2*((edge1)-(edge0))),0.0), 0*(val), iffun(gtfun(((val)-(edge0))/(2*((edge1)-(edge0))),0.5),0*(val)+0.5, ((val)-(edge0))/(2*((edge1)-(edge0)))))\
+                                       ,mult(iffun(ltfun(((val)-(edge0))/(2*((edge1)-(edge0))),0.0), 0*(val), iffun(gtfun(((val)-(edge0))/(2*((edge1)-(edge0))),0.5),0*(val)+0.5, ((val)-(edge0))/(2*((edge1)-(edge0)))))\
+                                       ,(mult(iffun(ltfun(((val)-(edge0))/(2*((edge1)-(edge0))),0.0), 0*(val), iffun(gtfun(((val)-(edge0))/(2*((edge1)-(edge0))),0.5),0*(val)+0.5, ((val)-(edge0))/(2*((edge1)-(edge0)))))\
+                                       ,(iffun(ltfun(((val)-(edge0))/(2*((edge1)-(edge0))),0.0), 0*(val), iffun(gtfun(((val)-(edge0))/(2*((edge1)-(edge0))),0.5),0*(val)+0.5, ((val)-(edge0))/(2*((edge1)-(edge0)))))\
+                                        *6 - 15)) + 10) )))\
+                                       )
+
+
+                                         
+#if ANYBODY_FILENAME_MAINFILE == &quot;helper_macros.any&quot;
+//  Test code. Only active if the file is loaded as main
+Main = 
+{
+  
+  AnyFolder StepFunctions = {
+    // Run the function on a vector input
+    AnyVector x_test = farr(-1.0, 0.1, 100);
+    AnyVector y_test = SMOOTHERSTEP(0, 3, x_test);
+    
+    AnyBodyStudy test_study = 
+    {
+      Gravity = {0,0,0};
+      // Run the function on single values as part of a study.
+      AnyVar SmootherStep = SMOOTHERSTEP(0.25, 0.75, t);
+      
+
+      AnyVar SmootherRamp= 100*SMOOTHRAMP(0.25, 0.5,t);
+
+    };
+  };
+  
+  AnyFolder MatrixCreation = 
+  {
+    // Identity matrix MxM
+    AnyMatrix eye = EYE(10);
+    // Matrix MxN of ones
+    AnyMatrix ones = ONES(6,3);
+    // Matrix MxN of ones
+    AnyMatrix zeros = ZEROS(2,7);
+   
+    // Matrix with column j set to ones
+    AnyMatrix ones_j = ONES_J(5,6,2);
+    
+    // Matrix with row i set to ones
+    AnyMatrix ones_i = ONES_I(4,3,1);
+    
+    // Matrix with element i,j set to one
+    AnyMatrix ones_ij = ONES_IJ(4,5,2,2);
+    
+    // Repeat vector into a matrix
+    AnyVector a = {1,2,3};
+    AnyMatrix repvec = REPVEC(a,2);
+    
+    AnyVector linspace1 = LINSPACE(1, 2, 100);
+    AnyVector linspace2 = LINSPACE(1.0, 9.999, 111);
+        
+  };
+};
+#endif
+ 
+#else
+
+
+#endif
+// -*- mode: cpp;-*-
+// vim: syntax=cpp</pre></noscript>
+<script src="https://gist.github.com/melund/cc98dba91cd1f29a18502f7a252938e7.js"> </script>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#anyscript" class="page__taxonomy-item" rel="tag">AnyScript</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#tips-n-tricks" class="page__taxonomy-item" rel="tag">Tips-n-Tricks</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-01-06T00:00:00+00:00">January 06, 2017</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Useful+AnyScript+Macros%20%2Ftips-n-tricks%2Fuseful-anyscript-macros%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Ftips-n-tricks%2Fuseful-anyscript-macros%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=%2Ftips-n-tricks%2Fuseful-anyscript-macros%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Ftips-n-tricks%2Fuseful-anyscript-macros%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/news/new-anyscript-site/" class="pagination--pager" title="Our new AnyScript landing page
+">Previous</a>
+    
+    
+      <a href="/tips-n-tricks/creating-videos-from-your-simulations/" class="pagination--pager" title="Creating videos
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+        
+        
+        
+        
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/posts/tutorials_teaser.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/news/freeing-the-anybody-tutorials/" rel="permalink">Freeing the AnyBody Tutorials
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Anyone, who works with AnyBody modeling system has at one time used the the AnyBody tutorials. They are a valuable resources when learning to use the AnyBody...</p>
+  </article>
+</div>
+        
+        
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/posts/vscode-teaser.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/editors/anyscript-in-vscode/" rel="permalink">AnyScript support in Visual Studio Code
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.
+</p>
+  </article>
+</div>
+        
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/anybody"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+      <li><a href="https://www.linkedin.com/company/anybody-technology-a-s"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> Linkedin</a></li>
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Morten Enemark Lund. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

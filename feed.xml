@@ -1,1 +1,1041 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-06-01T06:50:53+00:00</updated><id>/</id><title type="html">Site Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-06-01T09:29:09+00:00</updated><id>/</id><title type="html">AnyScript Community</title><subtitle>A community for the users of AnyBody Modeling System and the AnyScript language.</subtitle><author><name>AnyBody Technology</name><email>sales@anybodytech.com</email></author><entry><title type="html">What is new AMMR 2.0</title><link href="/news/ammr-2.0/" rel="alternate" type="text/html" title="What is new AMMR 2.0" /><published>2017-11-29T00:00:00+00:00</published><updated>2017-11-29T00:00:00+00:00</updated><id>/news/ammr-2.0</id><content type="html" xml:base="/news/ammr-2.0/">&lt;p&gt;Join us for the launch of version 7.1 of our musculoskeletal simulation software - The AnyBody Modeling System, and a new version of the AnyBody Model repository (AMMR 2.0).&lt;/p&gt;
+
+&lt;p&gt;In this webcast, Morten Enemark Lund, R&amp;amp;D Engineer at AnyBody Technology, will the new software features and the exciting new model repository which is shipped with version 7.1.&lt;/p&gt;
+
+&lt;p&gt;THe features include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;New lower extremity model (TLEM2.1)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;New framework for MoCap models (AnyMoCap)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;New Manidble model&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;New calibration scheme&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Numerous updates to body models and example applications.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With the release of the AnyBody Modeling System 7.1 update, we thought it was
+time to make a post about all the improvements in the new model repository.&lt;/p&gt;
+
+&lt;p&gt;The AnyBody Managed Model Repository (AMMR) version 2.0 marks the culmination of
+a huge task to update our existing models and adding new models and examples.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/tutorials_new_tutorial.png&quot; alt=&quot;New tutorials website&quot; /&gt;
+
+  &lt;figcaption&gt;The new tutorials&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;new-ammr-documentation&quot;&gt;New AMMR documentation&lt;/h2&gt;
+
+&lt;h2 id=&quot;new-tutorials&quot;&gt;New Tutorials&lt;/h2&gt;
+
+&lt;h2 id=&quot;anymocap&quot;&gt;AnyMoCap&lt;/h2&gt;
+
+&lt;h2 id=&quot;new-lower-extremity-model-version-21&quot;&gt;New Lower Extremity model (Version 2.1)&lt;/h2&gt;
+
+&lt;h2 id=&quot;future-work&quot;&gt;Future work&lt;/h2&gt;
+
+&lt;p&gt;Of course we are not done. There are new model developments in the pipeline, and some of the improvements to the structure of the lower extremity model we would also like to do for the upper body.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-little-history&quot;&gt;A little history&lt;/h2&gt;
+
+&lt;p&gt;The tutorials used to live as compiled HTML (CHM), a binary format for a
+documentation system called Microsoft HTML Help. You find this kind of help
+resources in many older Windows Programmers.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/tutorials_old_tutorial.png&quot; alt=&quot;Old tutorials hosted as Microsoft HTML help&quot; /&gt;
+
+  &lt;figcaption&gt;The old Tutorials served through Microsoft HTML help&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Today it may look old fashioned, but it was the best choice for distributing
+documentation in 2003 when the first version of AnyBody emerged.&lt;/p&gt;
+
+&lt;p&gt;Microsoft has since discontinued the HTML Help system. Today there are much
+better options for software documentation which makes it easier to both use the
+tutorials and maintain them.&lt;/p&gt;
+
+&lt;h2 id=&quot;sphinx-for-software-documentation&quot;&gt;Sphinx for software documentation&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sphinx-doc.org/en/stable/&quot;&gt;Sphinx&lt;/a&gt; is a tool for generating software
+documentation. The Python community originally developed it for creating the
+documentation for the Python programming language. Today it is widely used in
+many different domains. The Linux community recently (2016) chose Sphinx as the
+new documentation system for the Linux kernel. Sphinx is well maintained and
+actively developed, and very easy to use.&lt;/p&gt;
+
+&lt;p&gt;Sphinx converts reStructuredText files into HTML, pdf, epub or other formats.
+reStructuredText is simply plain text files with extra simple markup to define
+headers and other types of formatting.&lt;/p&gt;
+
+&lt;p&gt;A reStructuredText file could look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+Lesson 2: Advanced Concepts
+===========================
+
+Open the model from lesson 1 and change the following lines:
+
+.. code-block:: AnyScript
+
+    InverseDynamics.Criterion = {
+      Type = §MR_Polynomial§;
+    };
+
+Now we have specified polynomial muscle recruitment, which 
+comes down to the following objective function:
+
+.. math:: G = \sum_{i} \left( \frac{f_i}{N_i} \right)^p
+
+We have not, however, specified what the power *p* is. In the
+absence of a specification, AnyBody assumes *p* = 3, If we 
+reload and rerun the model now, we get the following result:
+
+.. figure:: _static/lesson2/chart1.png
+   :scale: 50 %
+   
+   Results with 5 order Polynomial muscle criterion.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Having the tutorials as plain text, may at first seem like a disadvantage. The
+AnyBody tutorials are currently stored as Word documents. But reStructuredText
+has many advantages as well.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Better control of formatting and style&lt;/li&gt;
+  &lt;li&gt;Easier tracking of updates and changes&lt;/li&gt;
+  &lt;li&gt;Pictures and images live outside the document&lt;/li&gt;
+  &lt;li&gt;Makes it easier to accept contribution from users&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally, MS Word can still be used when writing new tutorials. The &lt;code class=&quot;highlighter-rouge&quot;&gt;*.docx&lt;/code&gt; file
+can be converted into reStructured text using the &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;
+document converter. Pandoc can convert tables, any formatting, embedded images
+into reStructuredText. Pandoc even converts equations from MS Word into Latex
+style formulas which work in reStructuredText files.&lt;/p&gt;
+
+&lt;h1 id=&quot;hosting-tutorials-on-github&quot;&gt;Hosting tutorials on GitHub&lt;/h1&gt;
+
+&lt;p&gt;The new source files for tutorials are hosted on the AnyBody Github account togehter with the build HTML files.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Source files:&lt;/strong&gt; &lt;a href=&quot;https://github.com/AnyBody/anybody-tutorial&quot;&gt;https://github.com/AnyBody/anybody-tutorial&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Web page:&lt;/strong&gt; &lt;a href=&quot;https://anyscript.org/tutorials&quot;&gt;https://anyscript.org/tutorials/dev&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Contributions are always welcome! So if you find typos, missing links or
+anything else help us fix it. It is easy. Just fork &lt;a href=&quot;https://github.com/AnyBody/anybody-tutorial&amp;gt;&quot;&gt;the repository on
+GitHub&lt;/a&gt;, make the changes, and
+issue a pull request.&lt;/p&gt;
+
+&lt;p&gt;Every pull request is automatically tested, to ensure that Sphinx builds the
+tutorials without errors. This done using &lt;a href=&quot;https://en.wikipedia.org/wiki/Travis_CI&quot;&gt;Travis
+CI&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;See status of the Travis CI build: &lt;a href=&quot;https://travis-ci.org/AnyBody/anybody-tutorial&quot;&gt;&lt;img src=&quot;https://travis-ci.org/AnyBody/anybody-tutorial.svg?branch=master&quot; alt=&quot;Build
+Status&quot; /&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once a change is accepted and merged into the repository the script also automatically deploys the tutorial web page.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="AMMR" /><category term="Models" /><summary type="html">With the release of the AnyBody Modeling System 7.1 update, we thought it was time to make a post about all the improvements in the new model repository.</summary></entry><entry><title type="html">Getting AnyBody and Numpy to work</title><link href="/news/Numpy-and-scipy/" rel="alternate" type="text/html" title="Getting AnyBody and Numpy to work" /><published>2017-11-25T00:00:00+00:00</published><updated>2017-11-25T00:00:00+00:00</updated><id>/news/Numpy-and-scipy</id><content type="html" xml:base="/news/Numpy-and-scipy/">&lt;p&gt;With the release of the AnyBody Modeling System 7.1 update, we thought it was
+time to make a post about all the improvements in the new model repository.&lt;/p&gt;
+
+&lt;p&gt;The AnyBody Managed Model Repository (AMMR) version 2.0 marks the culmination of
+a huge task to update our existing models and adding new models and examples.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/tutorials_new_tutorial.png&quot; alt=&quot;New tutorials website&quot; /&gt;
+
+  &lt;figcaption&gt;The new tutorials&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;new-ammr-documentation&quot;&gt;New AMMR documentation&lt;/h2&gt;
+
+&lt;h2 id=&quot;future-work&quot;&gt;Future work&lt;/h2&gt;
+
+&lt;p&gt;Of course we are not done. There are new model developments in the pipeline, and some of the improvements to the structure of the lower extremity model we would also like to do for the upper body.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-little-history&quot;&gt;A little history&lt;/h2&gt;
+
+&lt;p&gt;The tutorials used to live as compiled HTML (CHM), a binary format for a
+documentation system called Microsoft HTML Help. You find this kind of help
+resources in many older Windows Programmers.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/tutorials_old_tutorial.png&quot; alt=&quot;Old tutorials hosted as Microsoft HTML help&quot; /&gt;
+
+  &lt;figcaption&gt;The old Tutorials served through Microsoft HTML help&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Today it may look old fashioned, but it was the best choice for distributing
+documentation in 2003 when the first version of AnyBody emerged.&lt;/p&gt;
+
+&lt;p&gt;Microsoft has since discontinued the HTML Help system. Today there are much
+better options for software documentation which makes it easier to both use the
+tutorials and maintain them.&lt;/p&gt;
+
+&lt;h2 id=&quot;sphinx-for-software-documentation&quot;&gt;Sphinx for software documentation&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sphinx-doc.org/en/stable/&quot;&gt;Sphinx&lt;/a&gt; is a tool for generating software
+documentation. The Python community originally developed it for creating the
+documentation for the Python programming language. Today it is widely used in
+many different domains. The Linux community recently (2016) chose Sphinx as the
+new documentation system for the Linux kernel. Sphinx is well maintained and
+actively developed, and very easy to use.&lt;/p&gt;
+
+&lt;p&gt;Sphinx converts reStructuredText files into HTML, pdf, epub or other formats.
+reStructuredText is simply plain text files with extra simple markup to define
+headers and other types of formatting.&lt;/p&gt;
+
+&lt;p&gt;A reStructuredText file could look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+Lesson 2: Advanced Concepts
+===========================
+
+Open the model from lesson 1 and change the following lines:
+
+.. code-block:: AnyScript
+
+    InverseDynamics.Criterion = {
+      Type = §MR_Polynomial§;
+    };
+
+Now we have specified polynomial muscle recruitment, which 
+comes down to the following objective function:
+
+.. math:: G = \sum_{i} \left( \frac{f_i}{N_i} \right)^p
+
+We have not, however, specified what the power *p* is. In the
+absence of a specification, AnyBody assumes *p* = 3, If we 
+reload and rerun the model now, we get the following result:
+
+.. figure:: _static/lesson2/chart1.png
+   :scale: 50 %
+   
+   Results with 5 order Polynomial muscle criterion.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Having the tutorials as plain text, may at first seem like a disadvantage. The
+AnyBody tutorials are currently stored as Word documents. But reStructuredText
+has many advantages as well.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Better control of formatting and style&lt;/li&gt;
+  &lt;li&gt;Easier tracking of updates and changes&lt;/li&gt;
+  &lt;li&gt;Pictures and images live outside the document&lt;/li&gt;
+  &lt;li&gt;Makes it easier to accept contribution from users&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally, MS Word can still be used when writing new tutorials. The &lt;code class=&quot;highlighter-rouge&quot;&gt;*.docx&lt;/code&gt; file
+can be converted into reStructured text using the &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;
+document converter. Pandoc can convert tables, any formatting, embedded images
+into reStructuredText. Pandoc even converts equations from MS Word into Latex
+style formulas which work in reStructuredText files.&lt;/p&gt;
+
+&lt;h1 id=&quot;hosting-tutorials-on-github&quot;&gt;Hosting tutorials on GitHub&lt;/h1&gt;
+
+&lt;p&gt;The new source files for tutorials are hosted on the AnyBody Github account togehter with the build HTML files.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Source files:&lt;/strong&gt; &lt;a href=&quot;https://github.com/AnyBody/anybody-tutorial&quot;&gt;https://github.com/AnyBody/anybody-tutorial&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Web page:&lt;/strong&gt; &lt;a href=&quot;https://anyscript.org/tutorials&quot;&gt;https://anyscript.org/tutorials/dev&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Contributions are always welcome! So if you find typos, missing links or
+anything else help us fix it. It is easy. Just fork &lt;a href=&quot;https://github.com/AnyBody/anybody-tutorial&amp;gt;&quot;&gt;the repository on
+GitHub&lt;/a&gt;, make the changes, and
+issue a pull request.&lt;/p&gt;
+
+&lt;p&gt;Every pull request is automatically tested, to ensure that Sphinx builds the
+tutorials without errors. This done using &lt;a href=&quot;https://en.wikipedia.org/wiki/Travis_CI&quot;&gt;Travis
+CI&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;See status of the Travis CI build: &lt;a href=&quot;https://travis-ci.org/AnyBody/anybody-tutorial&quot;&gt;&lt;img src=&quot;https://travis-ci.org/AnyBody/anybody-tutorial.svg?branch=master&quot; alt=&quot;Build
+Status&quot; /&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once a change is accepted and merged into the repository the script also automatically deploys the tutorial web page.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="AMMR" /><category term="Models" /><summary type="html">In this post we will explore why it is hard to use the NumPy and Scipy packages from AnyBody.</summary></entry><entry><title type="html">Freeing the AnyBody Tutorials</title><link href="/news/freeing-the-anybody-tutorials/" rel="alternate" type="text/html" title="Freeing the AnyBody Tutorials" /><published>2017-08-14T00:00:00+00:00</published><updated>2017-08-14T00:00:00+00:00</updated><id>/news/freeing-the-anybody-tutorials</id><content type="html" xml:base="/news/freeing-the-anybody-tutorials/">&lt;p&gt;Anyone, who works with AnyBody modeling system has at one time used the AnyBody
+tutorials. They are a valuable resource when learning to use the AnyBody
+Modeling System and there are more than 15 different tutorials covering
+everything from ‘Getting Started’ tutorials for the new users to very advanced
+topics like force dependent kinematics and FEA interfaces.&lt;/p&gt;
+
+&lt;p&gt;Today, we are releasing a new &lt;a href=&quot;https://anyscript.org/tutorials&quot;&gt;web based version&lt;/a&gt; of the tutorials.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/tutorials_new_tutorial.png&quot; alt=&quot;New tutorials website&quot; /&gt;
+
+  &lt;figcaption&gt;The new tutorials&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;a-little-history&quot;&gt;A little history&lt;/h2&gt;
+
+&lt;p&gt;The tutorials used to live as compiled HTML (CHM), a binary format for a
+documentation system called Microsoft HTML Help. You find this kind of help
+resources in many older Windows Programmers.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/tutorials_old_tutorial.png&quot; alt=&quot;Old tutorials hosted as Microsoft HTML help&quot; /&gt;
+
+  &lt;figcaption&gt;The old Tutorials served through Microsoft HTML help&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Today it may look old fashioned, but it was the best choice for distributing
+documentation in 2003 when the first version of AnyBody emerged.&lt;/p&gt;
+
+&lt;p&gt;Microsoft has since discontinued the HTML Help system. Today there are much
+better options for software documentation which makes it easier to both use the
+tutorials and maintain them.&lt;/p&gt;
+
+&lt;h2 id=&quot;sphinx-for-software-documentation&quot;&gt;Sphinx for software documentation&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sphinx-doc.org/en/stable/&quot;&gt;Sphinx&lt;/a&gt; is a tool for generating software
+documentation. The Python community originally developed it for creating the
+documentation for the Python programming language. Today it is widely used in
+many different domains. The Linux community recently (2016) chose Sphinx as the
+new documentation system for the Linux kernel. Sphinx is well maintained and
+actively developed, and very easy to use.&lt;/p&gt;
+
+&lt;p&gt;Sphinx converts reStructuredText files into HTML, pdf, epub or other formats.
+reStructuredText is simply plain text files with extra simple markup to define
+headers and other types of formatting.&lt;/p&gt;
+
+&lt;p&gt;A reStructuredText file could look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+Lesson 2: Advanced Concepts
+===========================
+
+Open the model from lesson 1 and change the following lines:
+
+.. code-block:: AnyScript
+
+    InverseDynamics.Criterion = {
+      Type = §MR_Polynomial§;
+    };
+
+Now we have specified polynomial muscle recruitment, which 
+comes down to the following objective function:
+
+.. math:: G = \sum_{i} \left( \frac{f_i}{N_i} \right)^p
+
+We have not, however, specified what the power *p* is. In the
+absence of a specification, AnyBody assumes *p* = 3, If we 
+reload and rerun the model now, we get the following result:
+
+.. figure:: _static/lesson2/chart1.png
+   :scale: 50 %
+   
+   Results with 5 order Polynomial muscle criterion.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Having the tutorials as plain text, may at first seem like a disadvantage. The
+AnyBody tutorials are currently stored as Word documents. But reStructuredText
+has many advantages as well.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Better control of formatting and style&lt;/li&gt;
+  &lt;li&gt;Easier tracking of updates and changes&lt;/li&gt;
+  &lt;li&gt;Pictures and images live outside the document&lt;/li&gt;
+  &lt;li&gt;Makes it easier to accept contribution from users&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally, MS Word can still be used when writing new tutorials. The &lt;code class=&quot;highlighter-rouge&quot;&gt;*.docx&lt;/code&gt; file
+can be converted into reStructured text using the &lt;a href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt;
+document converter. Pandoc can convert tables, any formatting, embedded images
+into reStructuredText. Pandoc even converts equations from MS Word into Latex
+style formulas which work in reStructuredText files.&lt;/p&gt;
+
+&lt;h1 id=&quot;hosting-tutorials-on-github&quot;&gt;Hosting tutorials on GitHub&lt;/h1&gt;
+
+&lt;p&gt;The new source files for tutorials are hosted on the AnyBody Github account togehter with the build HTML files.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Source files:&lt;/strong&gt; &lt;a href=&quot;https://github.com/AnyBody/anybody-tutorial&quot;&gt;https://github.com/AnyBody/anybody-tutorial&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Web page:&lt;/strong&gt; &lt;a href=&quot;https://anyscript.org/tutorials&quot;&gt;https://anyscript.org/tutorials/dev&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Contributions are always welcome! So if you find typos, missing links or
+anything else help us fix it. It is easy. Just fork &lt;a href=&quot;https://github.com/AnyBody/anybody-tutorial&amp;gt;&quot;&gt;the repository on
+GitHub&lt;/a&gt;, make the changes, and
+issue a pull request.&lt;/p&gt;
+
+&lt;p&gt;Every pull request is automatically tested, to ensure that Sphinx builds the
+tutorials without errors. This done using &lt;a href=&quot;https://en.wikipedia.org/wiki/Travis_CI&quot;&gt;Travis
+CI&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;See status of the Travis CI build: &lt;a href=&quot;https://travis-ci.org/AnyBody/anybody-tutorial&quot;&gt;&lt;img src=&quot;https://travis-ci.org/AnyBody/anybody-tutorial.svg?branch=master&quot; alt=&quot;Build
+Status&quot; /&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once a change is accepted and merged into the repository the script also
+automatically deploys the tutorial web page.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Tutorials" /><category term="Sphinx" /><summary type="html">Anyone, who works with AnyBody modeling system has at one time used the the AnyBody tutorials. They are a valuable resources when learning to use the AnyBody Modeling System</summary></entry><entry><title type="html">AnyScript support in Visual Studio Code</title><link href="/editors/anyscript-in-vscode/" rel="alternate" type="text/html" title="AnyScript support in Visual Studio Code" /><published>2017-07-15T00:00:00+00:00</published><updated>2017-07-15T00:00:00+00:00</updated><id>/editors/anyscript-in-vscode</id><content type="html" xml:base="/editors/anyscript-in-vscode/">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;Visual Studio Code&lt;/a&gt;(VS Code) is one of the newest text
+editors to join the group of new powerful source code editors like &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;,  &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; and &lt;a href=&quot;http://brackets.io&quot;&gt;brackets&lt;/a&gt;. All of which have become extremely popular in recent years.&lt;/p&gt;
+
+&lt;p&gt;Visual Studio Code  is currently my favorite text editor. It is cross-platform, lightweight, extensible and powerful. So of
+course I want to use it when working with AnyScript. In this post I will show a new
+AnyScript extension for VSCode, that does syntax highlighting, code folding,
+and snippets.&lt;/p&gt;
+
+&lt;p&gt;This is the second post in our series on using external editors for AnyScript.
+&lt;a href=&quot;/editors/notepad++-and-anyscript/&quot;&gt;In the first post&lt;/a&gt;)
+I showed a handy extension for &lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;Notepad++&lt;/a&gt;,
+so if you use Notepad++ check that post.&lt;/p&gt;
+
+&lt;h2 id=&quot;visual-studio-code&quot;&gt;Visual Studio Code&lt;/h2&gt;
+&lt;p&gt;Visual Studio Code or VS Code is a source code editor developed by Microsoft for
+both Windows, Linux and MacOS. It is free, open source and includes a lot of
+advanced features for working with source code. It is also very customizable so 
+users can change themes, keyboard shortcuts and much more.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/vscode_screenshot.png&quot; alt=&quot;VSCode&quot; /&gt;
+
+  &lt;figcaption&gt;Screenshot from Visual Studio Code, with AnyScript syntax highlighting.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;VS code looks a little different from traditional Windows programs, but it is
+easy enough to use. The simple looks deceives. VS Code has all the same features
+as for example &lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;Notepad++&lt;/a&gt;, and if you miss a certain feature VS Code has a good extension system. So the chances are
+that there is a user contributed extension to help your specific need.&lt;/p&gt;
+
+&lt;h2 id=&quot;anyscript-extension&quot;&gt;AnyScript Extension&lt;/h2&gt;
+&lt;p&gt;In the screen shoot above shows a file with AnyScript syntax highlighting. Highlighting in AnyScript files works as soon as the AnyScript extension is installed. It is easy to install. Just click the extension icon at the bottom of left sidebar and
+search for AnyScript. Then click install.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/vscode_extension_install.png&quot; alt=&quot;VSCode&quot; /&gt;
+
+  &lt;figcaption&gt;Installing the AnyScript extension.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;syntax-highlighting-and-code-folding&quot;&gt;Syntax highlighting and code folding&lt;/h3&gt;
+
+&lt;p&gt;Once the extension is installed the all AnyScript files will have highlighting.&lt;/p&gt;
+
+&lt;p&gt;THe plugin also gives you code folding, which allows you to collapse classes and
+folders. A feature which is really handy when working on large files.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/vscode_folding.png&quot; alt=&quot;VSCode code folding&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;VS hCode supports code snippets which are templates that makes it easier to write
+repeating code patterns. This part isn’t fully supported by the extension yet.
+But I have added few snippets for the following classes and functions:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;AnyDrawRefFrame&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyRefNode&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;RotMat&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyFunConst&lt;/code&gt;,  &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyFolder&lt;/code&gt;,
+&lt;code class=&quot;highlighter-rouge&quot;&gt;AnyKinMeasureOrg&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyKinRotational&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The snippet inserter is activated by pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-shift-P&lt;/code&gt; and then writing
+&lt;code class=&quot;highlighter-rouge&quot;&gt;insert snippet&lt;/code&gt;. Note: you need to be in a AnyScript file to get the AnyScript
+snippets.&lt;/p&gt;
+
+&lt;p&gt;Snippets can also be inserted using the tab completer. So if you start to type
+the name of the class e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyDrawRe&lt;/code&gt; and press tab the snippet is inserted.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/vscode_snippets.gif&quot; alt=&quot;VSCode code folding&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The snippets are just meant as a test, but hopefully we can have snippets for all the AnyScript classes in the future.&lt;/p&gt;
+
+&lt;h3 id=&quot;help-make-the-extension-better&quot;&gt;Help make the extension better&lt;/h3&gt;
+
+&lt;p&gt;Here is an link to page where the extension live:
+https://github.com/AnyBody/vscode-anyscript. Any improvements and help is most
+appreciated.&lt;/p&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Syntax highlighting" /><category term="Visual Studio Code" /><summary type="html">Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.</summary></entry><entry><title type="html">Body Model Configuration App</title><link href="/tools/body-model-configurator/" rel="alternate" type="text/html" title="Body Model Configuration App" /><published>2017-05-25T00:00:00+00:00</published><updated>2017-05-25T00:00:00+00:00</updated><id>/tools/body-model-configurator</id><content type="html" xml:base="/tools/body-model-configurator/">&lt;p&gt;Graphical user interfaces (GUIs) enables easy and intuitive interaction between
+users and computer software. But GUIs may also hamper the flexibility and make
+the software less powerful. Hence, many powerful software tools are based on
+scripts, text and code. This is also the case of the AnyBody Modeling System.
+AnyScript is the language in which models are constructed.&lt;/p&gt;
+
+&lt;p&gt;One of the first things I also did when starting to use the AnyBody Modeling
+System, was to understand how to configure the human model. How to enable different body parts and how to set the available options for muscles, ligaments
+etc. The model is configured via AnyScript by defining switches
+which we call Body Model (BM) statements.&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#define BM_ARM_RIGHT ON
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Wouldn’t it be nice to configure the model by having some buttons and
+instantaneous visual feedback as well? That is what I thought! Therefore, I have
+developed a software which provides a GUI for configuring the
+Body Model in a more friendly manner and without trying to give up the
+flexibility of AnyScript.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/BM_Plugin_demo.gif&quot; alt=&quot;BM_Plugin_Demo&quot; /&gt;
+
+  &lt;figcaption&gt;BM Plugin: gives you the ability to visually configure the Body Model.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This software (called ‘BM-Plugin’) comes as an extension for the AnyBody
+Modeling System. The layout is pretty straight forward, so you will not have a
+hard time finding your way around it. The available adjustments for the Body
+Model are classified in 6 tabs (Body, Arms, Trunk, Legs, Scaling, Mannequin
+Drivers). The adjustments which could not be classified in any of the tabs can
+be found in the ‘Advanced Tab’.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;To use the BM-Plugin, you must have installed the Anaconda Python distribution
+which you can find it &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;here&lt;/a&gt;. Make sure to
+install python 3.6. Open an Anaconda terminal and execute:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--channel&lt;/span&gt; anybody bm-plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If the command is not working, you might need to run the terminal as Administrator.
+After the installation you can find the application in the Windows start menu.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Start-&amp;gt;AnyBody plugins-&amp;gt;Body Model Configurator&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The Plugin modifies an AnyScript (&lt;code class=&quot;highlighter-rouge&quot;&gt;.any&lt;/code&gt;) file and stores the configuration as 
+BM statements inside it. Once you open the plugin, it will ask you
+to choose an existing &lt;code class=&quot;highlighter-rouge&quot;&gt;.any&lt;/code&gt; file. You can 
+also use the tool on your existing model. Just choose the file where you have your
+BM-statements.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/Any_file.JPG&quot; alt=&quot;Any_file&quot; /&gt;
+
+  &lt;figcaption&gt;Choose the .any file with which the plugin will interact.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The absolute path of the &lt;code class=&quot;highlighter-rouge&quot;&gt;.any&lt;/code&gt; file has to be included in your model:&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include BM_configuration.any
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p class=&quot;notice--warning&quot;&gt;Be sure to include it before the &lt;code class=&quot;highlighter-rouge&quot;&gt;HumanModel.any&lt;/code&gt; is included. Otherwise the configuration will
+have no effect.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/Include_Plugin.JPG&quot; alt=&quot;Include_Plugin&quot; /&gt;
+
+  &lt;figcaption&gt;Include the .any file in AnyBody&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The plugin modifies only the BM statements in the .any file, and shouldn’t mess
+with formatting of the file. Therefore, you may have other stuff in it. Any new
+BM statements are added at the end of the file, but are free to manually format
+the file.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;As I said before, the plugin is very easy to use and it offers an alternative to
+writing AnyScript for configuring the Body Model. You will see that there is a
+level of interdependency between different available options. So the
+combinations of adjustments which cannot be compiled by the AnyBody Modeling
+System will not be possible to select in the Plugin. However, in the Advanced tab
+you are allowed to choose any combination of BM
+statements you desire. Descriptions for each BM statement and for their available options are provided in this tab.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/Adv_tab.JPG&quot; alt=&quot;Adv_tab&quot; /&gt;
+
+  &lt;figcaption&gt;The advanced tab of the plugin.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The grid in the Advanced tab is populated using the &lt;code class=&quot;highlighter-rouge&quot;&gt;.xml&lt;/code&gt; file located in AMMR
+where all the BM statements can be found. Every time you run the plugin, it
+will check that &lt;code class=&quot;highlighter-rouge&quot;&gt;.xml&lt;/code&gt; file for any changes and it will update the grid in
+advanced tab with any new BM statements it finds. The &lt;code class=&quot;highlighter-rouge&quot;&gt;.xml&lt;/code&gt; file is in the installation
+files of the plugin.&lt;/p&gt;
+
+&lt;h2 id=&quot;further-development&quot;&gt;Further development:&lt;/h2&gt;
+
+&lt;p&gt;To make this plugin as attractive as possible, a number of new cool things will
+be added in the feature and I am already working on them:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connection with AnyBody: in order to give the possibility of opening the
+plugin directly from AnyBody, to load the model by pressing a button in the
+plugin and to automatically add the include line where it has to be in the Body
+Model’s script;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add control over Body parameters like Weight and Height (these are not BM statements);&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Integrate the plugin with AMMR to be up to date with the latest BM statements;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add the possibility for the user to add their own GUI elements linked to custom BM statements.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now I think you know enough about the plugin to try it yourself, so what are you waiting for?&lt;/p&gt;
+
+&lt;p&gt;Any development suggestions and feedback are more than welcomed!&lt;/p&gt;</content><author><name>Ioan-Matei Sarivan</name></author><category term="Model configuration" /><category term="BM switches" /><summary type="html">This introduces a python application to help configure your model.</summary></entry><entry><title type="html">Add limits to the Range of Motion</title><link href="/tools/rom-limits/" rel="alternate" type="text/html" title="Add limits to the Range of Motion" /><published>2017-05-04T00:00:00+00:00</published><updated>2017-05-04T00:00:00+00:00</updated><id>/tools/rom-limits</id><content type="html" xml:base="/tools/rom-limits/">&lt;p&gt;In this post, I will show a new AnyScript class template to add range-of-motion
+limits to Human body model.&lt;/p&gt;
+
+&lt;p&gt;The implementation consist of two AnyScript class templates. A high
+level class template &lt;code class=&quot;highlighter-rouge&quot;&gt;RangeOfMotionLimits&lt;/code&gt; which makes it easy to add
+Range-of-motion limits to all the joints on the Musculoskeltal model.&lt;/p&gt;
+
+&lt;p&gt;Behind the scenes the high-level template uses a more generic low-leve template
+&lt;code class=&quot;highlighter-rouge&quot;&gt;KinLimitsDriver&lt;/code&gt;, which can add limits to any kinematic measure.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage:&lt;/h2&gt;
+
+&lt;p&gt;To use the high level class template &lt;code class=&quot;highlighter-rouge&quot;&gt;RangeOfMotionLimits&lt;/code&gt; you must first 
+include the file in which it is defined.&lt;/p&gt;
+
+&lt;p&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;#include &quot;../path/to/RangeOfMotionLimits_template.any&quot;&lt;/code&gt; in the beginning
+of your main file. Then create the &lt;code class=&quot;highlighter-rouge&quot;&gt;RangeOfMotionLimits&lt;/code&gt; class inside Main after 
+the human model is included in the model:&lt;/p&gt;
+
+&lt;div class=&quot;language-c# highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;../path/to/RangeOfMotionLimits_template.any&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// It is important that the human model is include&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// before the JointLimit template. This is to ensure&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// that all BM statements are defined.&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;ANYBODY_PATH_BODY&amp;gt;/HumanModel.any&quot;&lt;/span&gt;
+
+
+  &lt;span class=&quot;n&quot;&gt;RangeOfMotionLimits&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ROM_Limits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;ARM_RIGHT&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BM_ARM_RIGHT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;ARM_LEFT&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BM_ARM_LEFT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;LEG_RIGHT&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BM_LEG_RIGHT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;LEG_LEFT&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BM_LEG_LEFT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;TRUNK_NECK&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BM_TRUNK_NECK&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// Example of changing af few of the limits&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Limits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Trunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PelvisThoraxExtension&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Limits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ElbowPronation&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; 
+      
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If some joint should not have range of motion limits, the class accepts
+arguments for disabling individual joint limits:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  RangeOfMotionLimits RoMLimits(
+    PELVIS_THORAX_LATERAL_BENDING = &quot;Off&quot;
+    ... 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;find-the-code-on-github&quot;&gt;Find the code on GitHub&lt;/h3&gt;
+
+&lt;p&gt;The AnyScript template is &lt;a href=&quot;https://github.com/AnyBody/range-of-motion-limits&quot;&gt;hosted on GitHub&lt;/a&gt;,
+where you can find examples and documentation on the
+&lt;code class=&quot;highlighter-rouge&quot;&gt;class_template&lt;/code&gt; and the options which are available.&lt;/p&gt;</content><author><name>Søren Tørholm, PhD</name></author><category term="kinematics" /><category term="joints" /><summary type="html">In this post you will see how to add range-of-motion limits to your simulations.</summary></entry><entry><title type="html">Calculating the Instantaneous Axis of Rotation</title><link href="/tools/instantaneous-axis-of-rotation/" rel="alternate" type="text/html" title="Calculating the Instantaneous Axis of Rotation" /><published>2017-04-27T00:00:00+00:00</published><updated>2017-04-27T00:00:00+00:00</updated><id>/tools/instantaneous-axis-of-rotation</id><content type="html" xml:base="/tools/instantaneous-axis-of-rotation/">&lt;p&gt;The instantaneous axis of rotation between two bodies is a &lt;a href=&quot;https://scholar.google.dk/scholar?as_sdt=1,5&amp;amp;q=biomechanics+instantaneous+axis+of+rotation&amp;amp;hl=en&amp;amp;as_vis=1&quot;&gt;useful concept in
+biomechanics&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this post, we will dig into how to calculate the instantaneous
+axis of rotation and show an AnyScript &lt;code class=&quot;highlighter-rouge&quot;&gt;class_template&lt;/code&gt; that calculate and displays the
+axis between any two reference frames in the AnyBody
+Modeling System.&lt;/p&gt;
+
+&lt;p&gt;Before we dive into the AnyScript implementation let us look briefly at the math
+behind the instantaneous axis of rotation.&lt;/p&gt;
+
+&lt;h2 id=&quot;rigid-body-motion-in-3d&quot;&gt;Rigid body motion in 3D&lt;/h2&gt;
+
+&lt;p&gt;We can view any displacement of a body in a three-dimensional space as a
+rotation around a &lt;a href=&quot;https://en.wikipedia.org/wiki/Euler%27s_rotation_theorem&quot;&gt;single axis and a translation along that
+axis&lt;/a&gt;. This gives rise
+to the idea of a screw motion in 3D along what is also called the helical axis.
+If we split the movement up into infinitesimally small movements each of these
+will have an rotation axis and a linear velocity along that axis. This is the
+instantaneous axis of rotation, and as the name indicate will change direction
+and location as the object moves.&lt;/p&gt;
+
+&lt;p&gt;The angular velocity of rigid body is a vector quantity shared by all point of
+the rigid body. My old engineering math book defines it from the rate of change
+of the rotation matrix $R$:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{ {\mathrm d} }{ {\mathrm d}t}R = \vec{\omega} \times R&lt;/script&gt;
+
+&lt;p&gt;If we know the angular and linear velocity of any point on a rigid body, we can
+calculate the properties of the screw motion and the instantaneous axis of
+rotation.&lt;/p&gt;
+
+&lt;p&gt;Using $\vec{\omega}$ we can write the velocity $\vec{v}_P$ of a point $P$ at
+some distance $\vec{r}$ from the instantaneous axis of rotation as a sum of the
+linear velocity $\vec{v}_C$ along the axis of rotation and the tangential
+velocity around the axis of rotation:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation} \label{eq:1} \vec{v}_P = \vec{v}_C + \vec{\omega} \times \vec{r} \end{equation}&lt;/script&gt;
+
+&lt;figure class=&quot;align-center&quot; style=&quot;width: 400px&quot;&gt;
+    &lt;img src=&quot;/assets/images/posts/iaor_drawing.png&quot; alt=&quot;Axis drawing&quot; /&gt;
+    &lt;figcaption&gt;Rigid body rotating around an axis of rotation.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Similarly we can also calculate backwards and find the intantanous axis of
+rotation at some distance $-\vec{r}$ from any point if we know the linear
+velocity of the point and the angular velocity. This is given by:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation} \label{eq:2} -\vec{r}= \frac{\vec{\omega} \times \vec{v}_P }{
+\vec{\omega}\cdot\vec{\omega} } \end{equation}&lt;/script&gt;
+
+&lt;p&gt;Thus if know the position of a point $\vec{r}_P$, its 
+linear velocity $\vec{v}_P$ we can find closest point
+$\vec{r}_C$ on the rotation axis as:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{r}_C = \vec{r}_P - \vec{r} = \vec{r}_P + \frac{\vec{\omega}\times\vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }&lt;/script&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Short proof of $\ref{eq:2}$, skip it if you like:&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;Start with $\vec{\omega} \times \vec{v}_P$ and insert $\ref{eq:1}$. Since
+$\vec{\omega}$ and $\vec{v}_C$ are parallel their cross product cancel out.&lt;/p&gt;
+
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\require{cancel} \vec{\omega} \times \vec{v}_P = \vec{\omega} \times (\vec{v}_C+\vec{\omega} \times \vec{r})= \cancel{\vec{\omega} \times \vec{v}_C}+\vec{\omega}\times (\vec{\omega} \times \vec{r})&lt;/script&gt;
+
+  &lt;p&gt;Next we use the &lt;a href=&quot;https://en.wikipedia.org/wiki/Triple_product#Vector_triple_product&quot;&gt;vector tripple product&lt;/a&gt; to expand, and we note that $\vec{\omega}\cdot\vec{r}$ cancel out since the shortest vector from the rotation axis to any point is always perpendicular to angular velocity:&lt;/p&gt;
+
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\require{cancel}\vec{\omega}\times (\vec{\omega} \times \vec{r}) = \vec{\omega}(\cancel{\vec{\omega}\cdot\vec{r} })-\vec{r}(\vec{\omega}\cdot\vec{\omega})&lt;/script&gt;
+
+  &lt;p&gt;Finally we have:&lt;/p&gt;
+
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{\omega} \times \vec{v}_P = -\vec{r}(\vec{\omega}\cdot\vec{\omega}) \Leftrightarrow -\vec{r}= \frac{\vec{\omega} \times \vec{v}_P }{
+\vec{\omega}\cdot\vec{\omega} }&lt;/script&gt;
+
+  &lt;h3 id=&quot;disclaimer&quot;&gt;Disclaimer:&lt;/h3&gt;
+
+  &lt;p&gt;The math may not be strictly accurate. Sorry, I am an Engineer :) If
+you have more math skill than I please help make this more concise.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;properties&quot;&gt;Properties&lt;/h2&gt;
+
+&lt;p&gt;If for example, we have a rigid body with angular velocity $\vec{\omega}$ and
+some point $P$ with position $\vec{r}_P$ and velocity $\vec{v}_p$ then we can
+define the different properties:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Quantity&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\omega = |\vec{\omega}|&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;The magnitude of angular rotation.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\vec{e}_{IOAR} = \frac{\vec{\omega} }{\omega}&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;The direction of the intantanous axis of rotation.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\vec{r}_C = \vec{r}_P + \frac{\vec{\omega}\times\vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;The point C on the intantanous axis of rotation.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;h = \frac{\vec{\omega} \cdot \vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;Ratio of angular to linear angular velocity&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\vec{v}_C = h\vec{\omega}&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;The linear velocity at point $C$ along the axis of rotation.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p class=&quot;notice&quot;&gt;The list of properties is inspired by this answer from &lt;a href=&quot;https://physics.stackexchange.com/questions/173987/how-can-i-relate-linear-and-angular-motion-using-a-single-formula/174209#174209&quot;&gt;StackExchange
+Physics&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;All we need to know is the rotation velocity of a body and the velocity of any
+point to find the instantaneous axis of rotation.&lt;/p&gt;
+
+&lt;h2 id=&quot;anyscript-implementation&quot;&gt;AnyScript implementation&lt;/h2&gt;
+
+&lt;p&gt;In AnyScript we can easily find the angular velocity, and the linear velocity of
+a reference frame using the two classes &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyKinRotational&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyKinLinear&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;An implementaion to find the instantanous axis of rotation could be as simple
+as:&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;n&quot;&gt;AnyKinRotational&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Rotational&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;AngVelOnOff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;On&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;AnyRefFrame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ref1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ReferenceFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; 
+
+   &lt;span class=&quot;n&quot;&gt;AnyKinLinear&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Linear&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;Ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;AnyRefFrame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ref1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ReferenceFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+   
+   &lt;span class=&quot;c1&quot;&gt;/// Direction of the instantaneous axis of rotation&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;AnyVec3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e_iaor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Rotational&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Vel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rotational&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Vel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+   &lt;span class=&quot;c1&quot;&gt;/// The point on the rotation axis closest to ReferenceFrame origin&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;AnyVec3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r_iaor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cross&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rotational&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Vel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Vel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vnorm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rotational&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Vel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It is important to set &lt;code class=&quot;highlighter-rouge&quot;&gt;AngVelOnOff = On;&lt;/code&gt; to make &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyKinRotational&lt;/code&gt; output the
+angular velocity vector. Of course this the code above is very simplified. We
+would also like a way to find the axis between between two moving bodies, and
+also draw the axis in the process.&lt;/p&gt;
+
+&lt;h3 id=&quot;anyscript-class-template&quot;&gt;AnyScript class template&lt;/h3&gt;
+
+&lt;p&gt;We have created a custom class template that makes it easy to calculate the
+properties listed above and display the instantaneous axis of rotation. Here is
+a short example on how to use the class:&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &quot;path/to/InstantaneousAxisOfRotation.any&quot;
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;InstantaneousAxisOfRotation&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IAOR&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Body1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Segments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ground&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Body2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Segments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ball&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That is all it takes. Here a how it looks for few very simple models:&lt;/p&gt;
+
+&lt;figure class=&quot;half&quot;&gt;
+    &lt;img src=&quot;/assets/images/posts/iaor_ball.gif&quot; /&gt;&lt;img src=&quot;/assets/images/posts/iaor_reffreames.gif&quot; /&gt;
+    &lt;figcaption&gt;Two examples of displaying the instanteneous axis of rotation for two simple models.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The code will eventually become part of the AnyBody Managed Model Repository
+(AMMR), which is shipped with the AnyBody Modeling System. But until the next
+release of the AMMR, the class template can be downloaded from GitHub.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/AnyBody/iaor&quot; class=&quot;btn btn--success btn--large&quot;&gt;&lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt; Get IAOR class template&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://physics.stackexchange.com/questions/173987/how-can-i-relate-linear-and-angular-motion-using-a-single-formula/174209#174209&quot;&gt;QA on Physics stackexchange&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Angular_velocity&quot;&gt;Wikipedia on angular velocity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Kinematics" /><summary type="html">The instantaneous axis of rotation between two bodies is a useful concept in biomechanics. In this post, we will dig into how to calculate the instantaneous axis of rotation.</summary></entry><entry><title type="html">AnyMoCap: A model framework motion caputure based models</title><link href="/anymocap/anymocap-motion-capture-framework/" rel="alternate" type="text/html" title="AnyMoCap: A model framework motion caputure based models" /><published>2017-04-25T00:00:00+00:00</published><updated>2017-04-25T00:00:00+00:00</updated><id>/anymocap/anymocap-motion-capture-framework</id><content type="html" xml:base="/anymocap/anymocap-motion-capture-framework/">&lt;p&gt;The AnyMoCap model is an effort to create a simple and unified framework for
+doing any kind of mocap analysis with the &lt;a href=&quot;http://anybodytech.com&quot;&gt;AnyBody Modeling
+System&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is first post in  a series on the AnyMoCap framework. In a series posts I
+will show how to use the frame and presents some of the features that makes it
+much easier to do motion capture based modelling.&lt;/p&gt;
+
+&lt;p&gt;Current motion caputure model examples in the &lt;a href=&quot;http://anybodytech.com/software/ammr&quot;&gt;AnyBody Managed Model Repository
+(AMMR)&lt;/a&gt; are releative complex and quite
+difficult to understand for new users.&lt;/p&gt;
+
+&lt;p&gt;The reason is that the MoCap models are different from the other examples models
+in the AMMR. Most importantly, MoCap models usually require an over-determinate
+kinematic solver to handle the excess in information that the optical markers
+provide. The over-determinate solver in AMS works great, but it can only find
+velocities and accelerations numerically. That has some performance issue when
+running inverse dynamics analysis. To overcome the problem, the MOCAP analysis
+is split into a two-step producedure. The two steps are ‘Marker tracking’ and 
+‘Inverse dynamic analysis’ on the figure below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/1038978/24096596/92051708-0d62-11e7-9cdd-360fc4b28339.png&quot; alt=&quot;Model-structure&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The overdeterminate kinematic analysis solves the marker tracking problem, and
+writes joint angles to a a set of files. These joint angles can then be used
+with the determinate kinematic solver in the inverse dynamic analysis.&lt;/p&gt;
+
+&lt;h2 id=&quot;model-structure&quot;&gt;Model structure.&lt;/h2&gt;
+
+&lt;p&gt;The AnyMoCap framwork contains two main folder &lt;code class=&quot;highlighter-rouge&quot;&gt;Examples&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Model&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AnyMoCap/ 
+├───Model/
+├───Examples/ 
+│   ├───Plug-in-gait-FullBody/
+│   ├───Plug-in-gait-LowerExtremity/
+│   └───SpecialFeatures/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The core of the framework is located under &lt;code class=&quot;highlighter-rouge&quot;&gt;Model/&lt;/code&gt;. The core files will
+eventually become part of the AMMR, and you shouldn’t need to change these files
+unless you want to help improve the AnyMoCap framework (See “Contributing”
+below.)&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Examples/&lt;/code&gt; folder contains examples of how to use the framework. Thre are
+currently two full blown examples of how to create a FullBody and LowerExtremity
+model with the Plug-in-Gait marker protocol. Other examples with other marker
+protocols will come soon. The &lt;code class=&quot;highlighter-rouge&quot;&gt;SpecialFeatures/&lt;/code&gt; folder contain small examples
+on specific features of the framework.&lt;/p&gt;
+
+&lt;p&gt;Examples are self-contained and could be locaated anywhere as long they have a
+valid reference link to where the AnyMoCap model is located on your computer.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Motion Capture" /><summary type="html">Creating motion caputure based models is difficult. But this often what new users want to start out working on.</summary></entry><entry><title type="html">Notepad++ and AnyScript files</title><link href="/editors/notepad++-and-anyscript/" rel="alternate" type="text/html" title="Notepad++ and AnyScript files" /><published>2017-04-18T00:00:00+00:00</published><updated>2017-04-18T00:00:00+00:00</updated><id>/editors/notepad++-and-anyscript</id><content type="html" xml:base="/editors/notepad++-and-anyscript/">&lt;p&gt;In this post, I will show an extension to get syntax
+highlighting and code folding working for
+&lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;Notepad++&lt;/a&gt;. This the first post in a series on using external editors with the AnyBody
+Modeling System.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-another-editor&quot;&gt;Why another editor?&lt;/h2&gt;
+
+&lt;p&gt;I shall be the first to admit that the editor in the AnyBody Modeling System
+(AMS) can feel very limited at times. It does have some crucial features like
+integration with the model tree. Even though some of these functions are
+indispensable when debugging models, the features of the editor in itself are
+pretty basic.&lt;/p&gt;
+
+&lt;p&gt;So when I write, edit or format AnyScript code I look for something more
+productive. Luckily, there are much more powerful alternatives available. Maybe
+you have heard about trending editors like &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;, &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime
+Text&lt;/a&gt;, &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VS Code&lt;/a&gt;?
+Or perhaps a bit older options like &lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;notepad++&lt;/a&gt;?
+All are text editors which many developers couldn’t live without.&lt;/p&gt;
+
+&lt;p&gt;Modern text editors have become popular for very good reasons. They are fast,
+lightweight, and powerful and they are not limited to a particular programming
+language like most integrated developer environments (IDE). If you ever used
+some of these powerful text editors, it can be hard to live without the features
+they provide.&lt;/p&gt;
+
+&lt;h1 id=&quot;anyscript-support-in-notepad&quot;&gt;AnyScript support in Notepad++&lt;/h1&gt;
+
+&lt;p&gt;Notepad++ was my favorite text editor for many years and I often still use it.
+It is fast and works well on Windows. To enable AnyScript support in Notepad++
+you need to the install AnyScript language extension.&lt;/p&gt;
+
+&lt;p&gt;You can find the extension on the &lt;a href=&quot;https://github.com/AnyBody/support/wiki/Using-Notepad---to-edit-AnyScipt&quot;&gt;AnyScript wiki
+site&lt;/a&gt;,
+or download it here directly:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://raw.githubusercontent.com/AnyBody/support/master/Wiki_Files/Using_Notepad/AnyScript.xml&quot; class=&quot;btn btn--success btn--large&quot;&gt;&lt;i class=&quot;fa fa-download&quot;&gt;&lt;/i&gt; Download AnyScript
+Notepad++&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Save the file &lt;code class=&quot;highlighter-rouge&quot;&gt;AnyScript.xml&lt;/code&gt; to your computer. Open Notepad++ and select the menu: “Language”-&amp;gt;”Define your language” and click import…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/22542671/20790053/f6378fe6-b7b6-11e6-9379-3d6b2f6f9b49.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With the extension in place AnyScript code will highlight correctly, and braces
+will match up. And it is possible to collapse pairs of braces &lt;code class=&quot;highlighter-rouge&quot;&gt;{&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;}&lt;/code&gt;, as well
+as pairs of &lt;code class=&quot;highlighter-rouge&quot;&gt;#if&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;#endif&lt;/code&gt;. That is huge advantage when working with very big
+AnyScript files.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-is-notepad-usefull&quot;&gt;Why is Notepad++ usefull&lt;/h3&gt;
+
+&lt;p&gt;The main benefits are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Effective search replace with regex&lt;/li&gt;
+  &lt;li&gt;Code folding&lt;/li&gt;
+  &lt;li&gt;Syntax highlighting&lt;/li&gt;
+  &lt;li&gt;Macro recording/playback&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://notepad-plus-plus.org/features/multi-editing.html&quot;&gt;Multi editing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Document map&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To really understand the power of notepad++ see this example of column mode editing:&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;https://cloud.githubusercontent.com/assets/22542671/20789877/5b5ba2b4-b7b6-11e6-991a-1f85db8522a0.gif&quot; alt=&quot;column mode editing&quot; /&gt;
+
+  &lt;figcaption&gt;The ability to write at multiple cursors or select a column of text is fantastic.&lt;/figcaption&gt;
+&lt;/figure&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Syntax highlighting" /><summary type="html">In this post, I will show an extension to get syntax highlighting and code folding working for Notepad++.</summary></entry><entry><title type="html">Create Animated GIFs</title><link href="/tips-n-tricks/create-animated-gifs/" rel="alternate" type="text/html" title="Create Animated GIFs" /><published>2017-04-10T00:00:00+00:00</published><updated>2017-04-10T00:00:00+00:00</updated><id>/tips-n-tricks/create-animated-gifs</id><content type="html" xml:base="/tips-n-tricks/create-animated-gifs/">&lt;p&gt;If a picture is worth a thousand words. What is the value of an animated GIF?&lt;/p&gt;
+
+&lt;p&gt;If anyone knew the answer to this question it was 
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Eadweard_Muybridge&quot;&gt;Eadweard Muybridge&lt;/a&gt; 
+who was an 19th century photographer and the grandfather of today’s
+biomechanical scientists. He used sequences of photographs to analyze human and
+animal motion. At Muybridge’s time the work created lots of attention, and even
+today his short animations are iconic.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/gif_muybridge_horse.gif&quot; alt=&quot;Muybridge animated horse&quot; /&gt;
+
+  &lt;figcaption&gt;Galloping horse by Eadweard Muybridge.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;/tips-n-tricks/creating-videos-from-your-simulations/&quot;&gt;In a previous post&lt;/a&gt;
+I introduced an AnyScript class-template to create awesome
+videos of your musculoskeletal simulations with a single click. But sometimes
+videos are just not enough.&lt;/p&gt;
+
+&lt;p&gt;If we want something that loops continuously and runs
+automatically, then we must create animated GIF files. Small animations
+accomplish something, which Eadweard Muybridge discovered long ago. They
+immediately convey the message and spell bind the viewer by allowing them 
+to dwell on the details.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-feature-to-create-animated-gifs&quot;&gt;New feature to create animated GIFs&lt;/h2&gt;
+
+&lt;p&gt;Today I just added a new feature to the video plugin. The ability to create good
+looking GIF files directly from the video. After producing the video, it can be converted into a GIF file. Just run the operation &lt;code class=&quot;highlighter-rouge&quot;&gt;Operations.Convert_video_to_animated_gif&lt;/code&gt;&lt;/p&gt;
+
+&lt;p class=&quot;full&quot;&gt;&lt;img src=&quot;/assets/images/posts/gif-convert-operation.png&quot; alt=&quot;Convert GIF operation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Creating good looking GIF is more tricky than it may seem. The number of
+possible colors is limited to 256 in a GIF file. Thus, it is important to
+specify a color palette, otherwise, the image quality will suffer.&lt;/p&gt;
+
+&lt;p&gt;The video plugin uses &lt;a href=&quot;https://ffmpeg.org/&quot;&gt;&lt;strong&gt;FFmpeg&lt;/strong&gt;&lt;/a&gt; in two passes. The first
+pass generates a global color palette from the entire video. The second pass
+encodes the GIF file with the generated palette. You can read more on the
+approach in this &lt;a href=&quot;http://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html&quot;&gt;excellent blog post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The video plugin does not create animated GIF  by default. For several reasons. Not all
+videos work well as an animated GIF file, and GIF files can take up a lot of space.
+But if you want to avoid the manual step, when generating the GIF file add the
+&lt;code class=&quot;highlighter-rouge&quot;&gt;CREATE_GIF=1&lt;/code&gt; argument to the AnyScript class template:&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;VideoLookAtCamera&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;MyCam&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UP_DIRECTION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CREATE_GIF&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;CameraLookAtPoint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MyModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Femur&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Knee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+       &lt;span class=&quot;n&quot;&gt;CameraFieldOfView&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;CameraDirection&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;BackgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;VideoInputFrameRate&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;VideoResolution&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1920&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;Analysis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;AnyOperation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ref&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MyStudy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Kinematics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;find-the-code-on-github&quot;&gt;Find the code on GitHub&lt;/h3&gt;
+
+&lt;p&gt;The AnyScript template is &lt;a href=&quot;https://github.com/AnyBody/video-recorder&quot;&gt;hosted on GitHub&lt;/a&gt;, 
+where you can also find a few examples that show how it works. The repository also has
+documentation on the &lt;code class=&quot;highlighter-rouge&quot;&gt;class_template&lt;/code&gt; and its options.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/assets/images/posts/video_human.gif&quot; alt=&quot;Human gif file&quot; /&gt;
+
+  &lt;figcaption&gt;Animated GIF file, where the camera is spinning around the model.&lt;/figcaption&gt;
+&lt;/figure&gt;</content><author><name>Morten Enemark Lund</name></author><category term="Creating Videos" /><summary type="html">If a picture is worth a thousand words. What is the value of an animated GIF?</summary></entry></feed>

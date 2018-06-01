@@ -1,0 +1,593 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>AnyScript support in Visual Studio Code - AnyScript Community</title>
+<meta name="description" content="Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.">
+
+
+  <meta name="author" content="Morten Enemark Lund">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AnyScript Community">
+<meta property="og:title" content="AnyScript support in Visual Studio Code">
+<meta property="og:url" content="/editors/anyscript-in-vscode/">
+
+
+  <meta property="og:description" content="Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.">
+
+
+
+  <meta property="og:image" content="/assets/images/posts/vscode-teaser.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2017-07-15T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/editors/anyscript-in-vscode/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": null,
+      "logo": "/assets/images/anyscript_logo_community.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "AnyBody Technology",
+      "url": null,
+      "sameAs": {"linkedin":"https://www.linkedin.com/company/anybody-technology-a-s","github":"https://github.com/anybody","youtube":"https://www.youtube.com/user/anybodytech","facebook":"https://www.facebook.com/groups/AnyBodyGroup/"}
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AnyScript Community Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#b91d47">
+<link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+<meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<style type="text/css">
+#watermark {
+  color: #e0e0e0;
+  font-size: 200pt;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  position: fixed;
+  min-height:50%; 
+  min-width:50%;
+  margin: 0;
+  z-index: -1;
+  left:50;
+  top:50;
+}
+</style>
+
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/"><img src="/assets/images/anyscript_logo.svg" height="200" width="180" align="top"/></a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/people/mel.jpg" alt="Morten Enemark Lund" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Morten Enemark Lund</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        R&D Engineer at AnyBody Technology.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Aalborg, Denmark</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://keybase.io/mortenlund" itemprop="sameAs">
+            <i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/biomedical" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/melund" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="AnyScript support in Visual Studio Code">
+    <meta itemprop="description" content="Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.">
+    <meta itemprop="datePublished" content="July 15, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">AnyScript support in Visual Studio Code
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><a href="https://code.visualstudio.com/">Visual Studio Code</a>(VS Code) is one of the newest text
+editors to join the group of new powerful source code editors like <a href="https://atom.io/">Atom</a>,  <a href="https://www.sublimetext.com/">Sublime Text</a> and <a href="http://brackets.io">brackets</a>. All of which have become extremely popular in recent years.</p>
+
+<p>Visual Studio Code  is currently my favorite text editor. It is cross-platform, lightweight, extensible and powerful. So of
+course I want to use it when working with AnyScript. In this post I will show a new
+AnyScript extension for VSCode, that does syntax highlighting, code folding,
+and snippets.</p>
+
+<p>This is the second post in our series on using external editors for AnyScript.
+<a href="/editors/notepad++-and-anyscript/">In the first post</a>)
+I showed a handy extension for <a href="https://notepad-plus-plus.org/">Notepad++</a>,
+so if you use Notepad++ check that post.</p>
+
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<p>Visual Studio Code or VS Code is a source code editor developed by Microsoft for
+both Windows, Linux and MacOS. It is free, open source and includes a lot of
+advanced features for working with source code. It is also very customizable so 
+users can change themes, keyboard shortcuts and much more.</p>
+
+<figure>
+  
+<img src="/assets/images/posts/vscode_screenshot.png" alt="VSCode" />
+
+  <figcaption>Screenshot from Visual Studio Code, with AnyScript syntax highlighting.</figcaption>
+</figure>
+
+<p>VS code looks a little different from traditional Windows programs, but it is
+easy enough to use. The simple looks deceives. VS Code has all the same features
+as for example <a href="https://notepad-plus-plus.org/">Notepad++</a>, and if you miss a certain feature VS Code has a good extension system. So the chances are
+that there is a user contributed extension to help your specific need.</p>
+
+<h2 id="anyscript-extension">AnyScript Extension</h2>
+<p>In the screen shoot above shows a file with AnyScript syntax highlighting. Highlighting in AnyScript files works as soon as the AnyScript extension is installed. It is easy to install. Just click the extension icon at the bottom of left sidebar and
+search for AnyScript. Then click install.</p>
+
+<figure>
+  
+<img src="/assets/images/posts/vscode_extension_install.png" alt="VSCode" />
+
+  <figcaption>Installing the AnyScript extension.</figcaption>
+</figure>
+
+<h3 id="syntax-highlighting-and-code-folding">Syntax highlighting and code folding</h3>
+
+<p>Once the extension is installed the all AnyScript files will have highlighting.</p>
+
+<p>THe plugin also gives you code folding, which allows you to collapse classes and
+folders. A feature which is really handy when working on large files.</p>
+
+<p><img src="/assets/images/posts/vscode_folding.png" alt="VSCode code folding" /></p>
+
+<p>VS hCode supports code snippets which are templates that makes it easier to write
+repeating code patterns. This part isn’t fully supported by the extension yet.
+But I have added few snippets for the following classes and functions:
+<code class="highlighter-rouge">AnyDrawRefFrame</code>, <code class="highlighter-rouge">AnyRefNode</code>, <code class="highlighter-rouge">RotMat</code>, <code class="highlighter-rouge">AnyFunConst</code>,  <code class="highlighter-rouge">AnyFolder</code>,
+<code class="highlighter-rouge">AnyKinMeasureOrg</code>, <code class="highlighter-rouge">AnyKinRotational</code>.</p>
+
+<p>The snippet inserter is activated by pressing <code class="highlighter-rouge">ctrl-shift-P</code> and then writing
+<code class="highlighter-rouge">insert snippet</code>. Note: you need to be in a AnyScript file to get the AnyScript
+snippets.</p>
+
+<p>Snippets can also be inserted using the tab completer. So if you start to type
+the name of the class e.g. <code class="highlighter-rouge">AnyDrawRe</code> and press tab the snippet is inserted.</p>
+
+<p><img src="/assets/images/posts/vscode_snippets.gif" alt="VSCode code folding" /></p>
+
+<p>The snippets are just meant as a test, but hopefully we can have snippets for all the AnyScript classes in the future.</p>
+
+<h3 id="help-make-the-extension-better">Help make the extension better</h3>
+
+<p>Here is an link to page where the extension live:
+https://github.com/AnyBody/vscode-anyscript. Any improvements and help is most
+appreciated.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#syntax-highlighting" class="page__taxonomy-item" rel="tag">Syntax highlighting</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#visual-studio-code" class="page__taxonomy-item" rel="tag">Visual Studio Code</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#editors" class="page__taxonomy-item" rel="tag">Editors</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-07-15T00:00:00+00:00">July 15, 2017</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=AnyScript+support+in+Visual+Studio+Code%20%2Feditors%2Fanyscript-in-vscode%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Feditors%2Fanyscript-in-vscode%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=%2Feditors%2Fanyscript-in-vscode%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Feditors%2Fanyscript-in-vscode%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tools/body-model-configurator/" class="pagination--pager" title="Body Model Configuration App
+">Previous</a>
+    
+    
+      <a href="/news/freeing-the-anybody-tutorials/" class="pagination--pager" title="Freeing the AnyBody Tutorials
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+        
+        
+        
+        
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/posts/tutorials_teaser.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/news/freeing-the-anybody-tutorials/" rel="permalink">Freeing the AnyBody Tutorials
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Anyone, who works with AnyBody modeling system has at one time used the the AnyBody tutorials. They are a valuable resources when learning to use the AnyBody...</p>
+  </article>
+</div>
+        
+        
+        
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/anybody"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+      <li><a href="https://www.linkedin.com/company/anybody-technology-a-s"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> Linkedin</a></li>
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Morten Enemark Lund. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

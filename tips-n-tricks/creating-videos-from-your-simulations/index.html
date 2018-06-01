@@ -1,0 +1,746 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Creating videos - AnyScript Community</title>
+<meta name="description" content="In this post you will see some manual and automatic techniques to create awesome looking videos from your musculoskeletal models.">
+
+
+  <meta name="author" content="Morten Enemark Lund">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AnyScript Community">
+<meta property="og:title" content="Creating videos">
+<meta property="og:url" content="/tips-n-tricks/creating-videos-from-your-simulations/">
+
+
+  <meta property="og:description" content="In this post you will see some manual and automatic techniques to create awesome looking videos from your musculoskeletal models.">
+
+
+
+  <meta property="og:image" content="/assets/images/posts/video_post_teaser.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2017-03-27T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/tips-n-tricks/creating-videos-from-your-simulations/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": null,
+      "logo": "/assets/images/anyscript_logo_community.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "AnyBody Technology",
+      "url": null,
+      "sameAs": {"linkedin":"https://www.linkedin.com/company/anybody-technology-a-s","github":"https://github.com/anybody","youtube":"https://www.youtube.com/user/anybodytech","facebook":"https://www.facebook.com/groups/AnyBodyGroup/"}
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AnyScript Community Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#b91d47">
+<link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+<meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<style type="text/css">
+#watermark {
+  color: #e0e0e0;
+  font-size: 200pt;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  position: fixed;
+  min-height:50%; 
+  min-width:50%;
+  margin: 0;
+  z-index: -1;
+  left:50;
+  top:50;
+}
+</style>
+
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/"><img src="/assets/images/anyscript_logo.svg" height="200" width="180" align="top"/></a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/people/mel.jpg" alt="Morten Enemark Lund" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Morten Enemark Lund</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        R&D Engineer at AnyBody Technology.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Aalborg, Denmark</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://keybase.io/mortenlund" itemprop="sameAs">
+            <i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/biomedical" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/melund" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Creating videos">
+    <meta itemprop="description" content="In this post you will see some manual and automatic techniques to create awesome looking videos from your musculoskeletal models.">
+    <meta itemprop="datePublished" content="March 27, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Creating videos
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In this post, I will show a new AnyScript plugin to create awesome videos of your
+musculoskeletal simulations with a single click.</p>
+
+<p><a href="https://github.com/AnyBody/video-recorder" class="btn btn--success btn--large"><i class="fa fa-download"></i> Download on GitHub</a></p>
+
+<p>Previously, I often spent hours creating videos for presentations, etc.. Now it
+takes me 10 minutes. Besides being easy to use the plugin also supports somewhat
+complicated setups where the camera follows the particular parts of the model or
+moves around the scene.</p>
+
+<h2 id="the-manual-way">The Manual way</h2>
+
+<p>Before we talk about the plugin, let me just show how to create videos the 
+normal way.</p>
+
+<p>The toolbar of “Model View” window in The AnyBody Modeling System has a small
+record button. It doesn’t record a video directly, but saves every frame as
+individual images.</p>
+
+<p class="full"><img src="/assets/images/posts/video_post_teaser.png" alt="alt" /></p>
+
+<p>Once you have all the images, you need to convert them into a video.</p>
+
+<h3 id="videomach">VideoMach</h3>
+<p>There good programs for doing this. The easiest solution is probably
+<a href="http://gromada.com/videomach/">VideoMach</a> which has a nice graphical user
+interface. Unfortuantly, the free version adds small watermark to the start of
+your videos.</p>
+
+<h3 id="ffmpeg">FFmpeg</h3>
+<p>An even better alternative is <a href="https://ffmpeg.org/"><strong>FFmpeg</strong></a>. It is purely
+command line based, so it may not be for everyone. But it is free, open source,
+and insanely powerful. It is also easy to use if you remember the syntax.</p>
+
+<p>Imagine we saved some images from you simulation (named <code class="highlighter-rouge">model_0000.png</code>). To the convert those files to a video run the following
+command in the same folder as the files:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg.exe -r 20 -i "model_%04d.png" -c:v libxvid -b:v 8000k -vf "fps=30,format=yuv420p" out.mp4
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">-r</code> parameter determines the input framerate. So you can change that value to make the
+video run faster or slower.</p>
+
+<p class="notice"><strong>Notice!</strong> Check the <a href="https://ffmpeg.org/ffmpeg.html">FFmpeg</a> documentation for what the different mean.</p>
+
+<h2 id="anyscript-plugin-to-create-videos">AnyScript plugin to create Videos</h2>
+
+<p>Once you have created a few videos the standard way, you realize that the
+biggest issues are reproducibility  and the manual workflow involved. Preparing
+the model, setting the camera angle and framing the scene. These are things
+which I always end up doing multiple times before I get the result I want. And
+it takes forever.</p>
+
+<p>There are ways we can automate some of this with AnyScript classes such as
+<code class="highlighter-rouge">AnyCameraLookAt</code> and <code class="highlighter-rouge">AnyCamRecorder</code>. You can even  create videos where the
+camera follows certain parts of your model or move around your model. All very
+nice. But it is also takes time to configure.</p>
+
+<p>So when I truly needed an awesome video, for example for a conference, I never have
+the time. The consequence has been that I make far fewer videos of my simulations
+than what I would like.</p>
+
+<h3 id="video-plugin-class">Video Plugin class</h3>
+
+<p>To overcome all these issues I wrote a small plugin to create videos from your
+models with a single click. It is an AnyScript <code class="highlighter-rouge">class_template</code> which can be
+included into any model.  It only takes a few lines of code to configure.</p>
+
+<p>It is hosted on GitHub, where you can <a href="https://github.com/AnyBody/video-recorder">download the code.</a>.</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>The plugin is an AnyScript class_template. It must be imported at the beginning of your model like this:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Include the Camera template class (somewhere before first Main)</span>
+<span class="cp">#include "Path/to/Video_Camera/CameraClassTemplate.any"
+</span></code></pre></div></div>
+
+<p>Next we can use the Class. Just add the following 10 lines of code anywhere within <code class="highlighter-rouge">Main = {...};</code></p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">VideoLookAtCamera</span>  <span class="n">MyCam</span> <span class="p">(</span><span class="n">UP_DIRECTION</span> <span class="o">=</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span> 
+  <span class="p">{</span>
+       <span class="n">CameraLookAtPoint</span> <span class="o">=</span> <span class="n">Main</span><span class="p">.</span><span class="n">MyModel</span><span class="p">.</span><span class="n">Femur</span><span class="p">.</span><span class="n">Knee</span><span class="p">.</span><span class="n">r</span><span class="p">;</span>  
+       <span class="n">CameraFieldOfView</span>  <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+       <span class="n">CameraDirection</span>  <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">};</span>
+       <span class="n">BackgroundColor</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+       <span class="n">VideoInputFrameRate</span>  <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+       <span class="n">VideoResolution</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">1080</span><span class="p">};</span>
+       <span class="n">Analysis</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="n">AnyOperation</span> <span class="o">&amp;</span><span class="n">ref</span> <span class="o">=</span> <span class="n">Main</span><span class="p">.</span><span class="n">MyStudy</span><span class="p">.</span><span class="n">Kinematics</span><span class="p">;</span>
+       <span class="p">};</span>
+  <span class="p">};</span>
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">UP_DIRECTION = y</code> argument defines how the camera is rotated. The meaning of the the different settings are summerized below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Member name</th>
+      <th style="text-align: center">Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CameraLookAtPoint</td>
+      <td style="text-align: center">AnyVec3</td>
+      <td>The point the camera focus on. This can be fixed point or some moving point (<code class="highlighter-rouge">r</code>) on the model.</td>
+    </tr>
+    <tr>
+      <td>CameraFieldOfView</td>
+      <td style="text-align: center">AnyFloat</td>
+      <td>The vertical field of view in meters at the LookAtPoint.</td>
+    </tr>
+    <tr>
+      <td>CameraDirection</td>
+      <td style="text-align: center">AnyVec3</td>
+      <td>The direction which the camera is placed. In global coordinate with respect to the LookAtPoint. This can also be a time varying vector.</td>
+    </tr>
+    <tr>
+      <td>BackgroundColor</td>
+      <td style="text-align: center">AnyVec3</td>
+      <td>The back ground color of the scene</td>
+    </tr>
+    <tr>
+      <td>VideoResolution</td>
+      <td style="text-align: center">AnyIntArray</td>
+      <td>Resolution of the output video in {Hight,Width}</td>
+    </tr>
+    <tr>
+      <td>VideoInputFrameRate</td>
+      <td style="text-align: center">AnyInt</td>
+      <td>Determines the speed of the video. Setting it to <code class="highlighter-rouge">nStep/(tEnd-tStart)</code> make the video run in real time.</td>
+    </tr>
+    <tr>
+      <td>Analysis</td>
+      <td style="text-align: center">AnyOperationSequence</td>
+      <td>Add operations which should be part of the video in this folder</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Class also supports setting the video codec, video bit rate, video name, and more. See
+<a href="https://github.com/AnyBody/video-recorder/blob/master/readme.md">the full documentation</a>
+for a complete list of options.</p>
+
+<p>Once added, some new operations will appear in the model tree.</p>
+
+<p class="full"><img src="/assets/images/posts/video_operation_preview.png" alt="alt" /></p>
+
+<h3 id="previewing-the-camera">Previewing the camera</h3>
+
+<p>The class does not record what the ModelView shows. Instead the camera view is
+configured programmatically. The class members <code class="highlighter-rouge">CameraLookAtPoint</code>,
+<code class="highlighter-rouge">CameraDirection</code>, and <code class="highlighter-rouge">CameraFieldOfView</code> define what the camera records. This
+is really nice since it allows us to get consistent videos.</p>
+
+<p>To get a preview of what the camera sees, select and run the <code class="highlighter-rouge">Preview</code>
+operation. It will collect a single frame and launch the Windows image viewer.</p>
+
+<figure class="">
+  <img src="/assets/images/posts/video_open_preview.png" alt="Preview camera view" />
+  
+    <figcaption>A single images will automatically open once you run the Preview operation.
+</figcaption>
+  
+</figure>
+
+<p>Once you are satisfied with the camera settings you are ready create a full video.</p>
+
+<h3 id="creating-the-video">Creating the video</h3>
+
+<p>To create a video simply select and run the <code class="highlighter-rouge">Create_Video</code> operation. That will
+run the model, collect the frames, convert them to a video and finally play the
+video.</p>
+
+<p class="full"><img src="/assets/images/posts/video_operation_create.png" alt="alt" /></p>
+
+<p>The video will by default be saved together with the main file of the model.
+This can of course be customized as well.</p>
+
+<h3 id="find-the-code-on-github">Find the code on GitHub</h3>
+
+<p>The AnyScript template is <a href="https://github.com/AnyBody/video-recorder">hosted on GitHub</a>,
+where you can also find a few examples that shows how it works. As well as documentation on the
+<code class="highlighter-rouge">class_template</code> and the options which are available.</p>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://www.youtube.com/embed/ofPjGwc4FY8" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#creating-videos" class="page__taxonomy-item" rel="tag">Creating Videos</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#tips-n-tricks" class="page__taxonomy-item" rel="tag">Tips-n-Tricks</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-03-27T00:00:00+00:00">March 27, 2017</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Creating+videos%20%2Ftips-n-tricks%2Fcreating-videos-from-your-simulations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Ftips-n-tricks%2Fcreating-videos-from-your-simulations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=%2Ftips-n-tricks%2Fcreating-videos-from-your-simulations%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Ftips-n-tricks%2Fcreating-videos-from-your-simulations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tips-n-tricks/useful-anyscript-macros/" class="pagination--pager" title="Useful AnyScript Macros
+">Previous</a>
+    
+    
+      <a href="/tips-n-tricks/create-animated-gifs/" class="pagination--pager" title="Create Animated GIFs
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+        
+        
+        
+        
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/posts/tutorials_teaser.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/news/freeing-the-anybody-tutorials/" rel="permalink">Freeing the AnyBody Tutorials
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Anyone, who works with AnyBody modeling system has at one time used the the AnyBody tutorials. They are a valuable resources when learning to use the AnyBody...</p>
+  </article>
+</div>
+        
+        
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/posts/vscode-teaser.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/editors/anyscript-in-vscode/" rel="permalink">AnyScript support in Visual Studio Code
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.
+</p>
+  </article>
+</div>
+        
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/anybody"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+      <li><a href="https://www.linkedin.com/company/anybody-technology-a-s"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> Linkedin</a></li>
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Morten Enemark Lund. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

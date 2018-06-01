@@ -9,19 +9,23 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Site Title</title>
-<meta name="description" content="An amazing website.">
+<!-- begin _includes/seo.html --><title>Welcome to AnyScript.org - AnyScript Community</title>
+<meta name="description" content="An open community for users of the AnyBody Modeling System and a resource for writing AnyScript code.Managed jointly by the AnyBody Research group and AnyBody Technology">
 
 
 
 <meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Site Title">
-<meta property="og:title" content="Site Title">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="AnyScript Community">
+<meta property="og:title" content="Welcome to AnyScript.org">
 <meta property="og:url" content="/">
 
 
+  <meta property="og:description" content="An open community for users of the AnyBody Modeling System and a resource for writing AnyScript code.Managed jointly by the AnyBody Research group and AnyBody Technology">
 
+
+
+  <meta property="og:image" content="/assets/images/header_splash4.jpg">
 
 
 
@@ -40,17 +44,28 @@
 
 
 
-
+  <link rel="next" href="/page2/">
 
 
 
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "Your Name",
+      "@type": "Organization",
       "url": null,
-      "sameAs": null
+      "logo": "/assets/images/anyscript_logo_community.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "AnyBody Technology",
+      "url": null,
+      "sameAs": {"linkedin":"https://www.linkedin.com/company/anybody-technology-a-s","github":"https://github.com/anybody","youtube":"https://www.youtube.com/user/anybodytech","facebook":"https://www.facebook.com/groups/AnyBodyGroup/"}
     }
   </script>
 
@@ -63,7 +78,7 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Site Title Feed">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AnyScript Community Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -96,12 +111,41 @@
     <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/icons/manifest.json">
+<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#b91d47">
+<link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+<meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<style type="text/css">
+#watermark {
+  color: #e0e0e0;
+  font-size: 200pt;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  position: fixed;
+  min-height:50%; 
+  min-width:50%;
+  margin: 0;
+  z-index: -1;
+  left:50;
+  top:50;
+}
+</style>
+
 
 <!-- end custom head snippets -->
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--splash">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -111,7 +155,7 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="/">Site Title</a>
+        <a class="site-title" href="/"><img src="/assets/images/anyscript_logo.svg" height="200" width="180" align="top"/></a>
         <ul class="visible-links">
           
             
@@ -131,118 +175,379 @@
   </div>
 </div>
 
+    
+
     <div class="initial-content">
       
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #5e616c; background-image: url('/assets/images/header_splash4.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Welcome to AnyScript.org
+
+        
+      </h1>
+      
+        <p class="page__lead">An open community for users of the AnyBody Modeling System and a resource for writing AnyScript code.<br /><small>Managed jointly by the <a href="http://www.biomechanics.m-tech.aau.dk/">AnyBody Research group</a> and <a href="https://www.anybodytech.com">AnyBody Technology</a></small>
+</p>
+      
+      
+      
+        <p><a href="/getting-started/" class="btn btn--light-outline btn--large"><i class='fa fa-life-ring'></i> Quick-Start for new users</a></p>
+      
+    </div>
+  
+  
+</div>
 
 
 
 <div id="main" role="main">
+  <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Welcome to AnyScript.org">
+    <meta itemprop="description" content="An open community for users of the AnyBody Modeling System and a resource for writing AnyScript code.Managed jointly by the AnyBody Research group and AnyBody Technology">
+    
+    
+
+    <section class="page__content" itemprop="text">
+      
+
+<div class="feature__wrapper">
+
   
-  <div class="sidebar sticky">
+
+    
+
+    <div class="feature__item--center">
+      <div class="archive__item">
+        
+
+        <div class="archive__item-body">
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Follow news and webcasts on <a href="https://youtube.dk/anybodytech" class="btn btn--youtube"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/anybody-technology-a-s" class="btn btn--linkedin"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
   
 
-
-<div itemscope itemtype="http://schema.org/Person">
-
-  
-
-  <div class="author__content">
-    
-      <h3 class="author__name" itemprop="name">Your Name</h3>
-    
-    
-      <p class="author__bio" itemprop="description">
-        I am an amazing person.
-      </p>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Somewhere</span>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
 </div>
 
+
+
+<div class="feature__wrapper">
+
   
-  </div>
 
-
-  <div class="archive">
     
-      <h1 id="page-title" class="page__title"></h1>
+
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src=
+              
+                "/assets/images/forum-feature4.png"
+              
+            alt="Forum">
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Get help from experts</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>The Forum is a place to give and get help from other users. Get help and and learn from the experts.</p>
+
+            </div>
+          
+
+          
+            <p><a href="http://forum.anyscript.org" class="btn "><i class="fa fa-users"></i> Check the Forum</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+
     
-    <h3 class="archive__subtitle">Recent Posts</h3>
+
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src=
+              
+                "/assets/images/wiki-feature2.png"
+              
+            alt="Wiki site">
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Find tips & tricks</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>The wiki has a wealth of information, tips&amp;tricks and FAQs for working with the AnyBody Modeling System.</p>
+
+            </div>
+          
+
+          
+            <p><a href="https://github.com/AnyBody/support/wiki" class="btn "><i class="fa fa-file-text"></i> Browse the Wiki</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+
+    
+
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src=
+              
+                "/assets/images/project-hosting2.png"
+              
+            alt="Project hosting">
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Join development</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>The repositories on Github has large and small models under development. Download cutting edge models or join development.</p>
+
+            </div>
+          
+
+          
+            <p><a href="https://github.com/AnyBody/" class="btn "><i class="fa fa-github-square"></i> Visit GitHub</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<h3 class="archive__subtitle">Recent Posts</h3>
 
 
 
 
 
 
-  </div>
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/news/freeing-the-anybody-tutorials/" rel="permalink">Freeing the AnyBody Tutorials
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Anyone, who works with AnyBody modeling system has at one time used the the AnyBody tutorials. They are a valuable resources when learning to use the AnyBody...</p>
+  </article>
+</div>
+
+
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/editors/anyscript-in-vscode/" rel="permalink">AnyScript support in Visual Studio Code
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Visual Studio Code is currently my favorite editor, so it natural that it should also support AnyScript.
+</p>
+  </article>
+</div>
+
+
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tools/instantaneous-axis-of-rotation/" rel="permalink">Calculating the Instantaneous Axis of Rotation
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">The instantaneous axis of rotation between two bodies is a useful concept in biomechanics. In this post, we will dig into how to calculate the instantaneous ...</p>
+  </article>
+</div>
+
+
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/editors/notepad++-and-anyscript/" rel="permalink">Notepad++ and AnyScript files
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">In this post, I will show an extension to get syntax highlighting and code folding working for Notepad++.
+</p>
+  </article>
+</div>
+
+
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tips-n-tricks/create-animated-gifs/" rel="permalink">Create Animated GIFs
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">If a picture is worth a thousand words. What is the value of an animated GIF?
+</p>
+  </article>
+</div>
+
+
+
+<nav class="pagination">
+  
+  <ul>
+    
+    
+    <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
+    
+
+    
+    
+      <li><a href="#" class="disabled current">1</a></li>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+
+    
+      <li><a href="/page2/">2</a></li>
+    
+
+    
+    
+      <li><a href="/page2/">Next</a></li>
+    
+  </ul>
+</nav>
+
+
+
+
+
+    </section>
+  </article>
 </div>
     </div>
 
@@ -261,13 +566,18 @@
     
     
     
+      <li><a href="https://github.com/anybody"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+      <li><a href="https://www.linkedin.com/company/anybody-technology-a-s"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> Linkedin</a></li>
     
     
     <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2018 Your Name. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Morten Enemark Lund. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -275,6 +585,8 @@
     
   <script src="/assets/js/main.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
 
 
 
