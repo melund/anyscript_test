@@ -106,6 +106,7 @@
 ./assets/images/wiki-feature.png
 ./assets/images/wiki-feature2.png
 ./assets/js/_main.js
+./assets/js/cla.js
 ./assets/js/lunr/lunr-en.js
 ./assets/js/lunr/lunr-gr.js
 ./assets/js/lunr/lunr-store.js
